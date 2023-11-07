@@ -2,12 +2,12 @@
 
 :root {
     --colorMain: #0b0d0a;
-    --colorSecondary: #d6c37f;
-    --colorLink: floralwhite;
-    --colorBgMain: #262858;
-    --colorBgSecondary: #506283;
-    --colorCTA: #582627;
+    --colorSecondary: #001c55;
+    --colorLink: #f7f7f7;
+    --colorBgMain: #f7f7f7;
+    --colorBgSecondary: #E4F2FF;
+    --colorCTA: #faa275;
 
-    --fontHeader: 'Martian Mono', 'Courier New', monospace;
-    --fontMain: Cantarell, Arial, sans-serif;
+    --fontHeader: 'Oooh Baby', serif;
+    --fontMain: 'Poppins', sans-serif;
 }

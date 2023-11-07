@@ -3,6 +3,7 @@
 @import 'about.css';
 @import 'contact.css';
 @import 'products.css';
+@import 'skabelon.css';
 
 
 * {
@@ -10,18 +11,26 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--fontMain);
+    background-color: var(--colorBgMain);
 }
 
 body {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    height: 100vh;
 }
 
 img {
     width: 100%;
     height: auto;
 }
+
+footer {
+    height: 10rem;
+    background-color: var(--colorBgSecondary);
+}
+
 
 /* ----- MOBILE ----- */
 
