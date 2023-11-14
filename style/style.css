@@ -11,14 +11,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--fontMain);
-    background-color: var(--colorBgMain);
 }
 
 body {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    height: 100vh;
+    background-color: var(--colorBgMain);
 }
 
 img {
@@ -26,11 +25,9 @@ img {
     height: auto;
 }
 
-footer {
-    height: 10rem;
-    background-color: var(--colorBgSecondary);
+h1 {
+    font-size: 3rem;
 }
-
 
 /* ----- MOBILE ----- */
 
