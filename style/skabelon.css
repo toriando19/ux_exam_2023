@@ -20,10 +20,6 @@ header a {
     text-decoration: none;
 }
 
-.active {
-    background-color: black;
-}
-
 #logo {
     width: 5rem;
     height: 5rem;
@@ -36,7 +32,7 @@ header a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vh;
+    height: 65vh;
     position: relative;
 }
 
@@ -53,10 +49,13 @@ header a {
     text-decoration: none;
     color: var(--colorLink);
     padding: 1rem;
+    line-height: 2;
 }
 
 .hero-text a:hover {
-    text-decoration: underline;
+    background-color: var(--colorBgSecondary);
+    border-radius: 35px;
+    color: var(--colorSecondary)
 }
 
 .hero-text p {
