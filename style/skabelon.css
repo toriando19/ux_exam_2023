@@ -1,34 +1,86 @@
-header {
-    width: 100vw;
+/* ----- MOBILE ----- */
+
+#site-header {
+    display: none;
+}
+
+/* mobile menu */
+#mobile-menu {
     padding: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    position: fixed;
+    background-color: var(--colorSecondary);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.hamburger,
+.close {
+    border: none;
+    color: var(--colorLink);
+    position: absolute;
+    top: 1.5rem;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+}
+
+#navbar {
+    position: absolute;
+    z-index: 1000;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 50vh;
     overflow: hidden;
-    z-index: 1;
-    background-color: transparent;
-    font-weight: 300;
+    background: var(--colorSecondary);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+    line-height: 2;
 }
 
-header a {
-    color: var(--colorLink);
-    padding: 1rem;
+#navbar a {
     text-decoration: none;
+    color: var(--colorLink);
+    font-weight: 400;
 }
 
-header a:hover {
+#navbar a:hover {
     color: var(--colorCTA);
 }
 
+#navbar:target {
+    transform: translateY(0);
+}
+
 #logo {
-    width: 5rem;
-    height: 5rem;
+    width: 2.8rem;
+    height: 2.8rem;
     background-color: var(--colorBgSecondary);
 }
+
+#icon-menu a {
+    color: var(--colorLink);
+    padding: 1rem;
+}
+
+/* search bar */
+
 
 /* The hero image */
 .hero-image {
@@ -36,7 +88,7 @@ header a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 65vh;
+    height: 80vh;
     position: relative;
 }
 
@@ -47,13 +99,19 @@ header a:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--colorLink);
+    width: 100%;
+}
+
+.hero-text h1 {
+    font-size: 2rem;
 }
 
 .hero-text a {
     text-decoration: none;
     color: var(--colorLink);
-    padding: 1rem;
+    padding: 0.8rem;
     line-height: 2;
+    font-size: 0.8rem;
 }
 
 .hero-text a:hover {
@@ -64,44 +122,166 @@ header a:hover {
 
 .hero-text p {
     padding: 1rem;
+    font-size: 0.8rem;
     font-weight: 300;
 }
 
+/* footer */
 footer {
     margin-top: 4rem;
-    padding: 5rem;
+    padding: 1rem;
     background-color: var(--colorBgSecondary);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: top;
     font-weight: 300;
-    column-gap: 3rem;
 }
 
-#footer-1 {
-    width: 35%;
+/* Style the menu items and hide the content by default */
+.accordion {
+    width: 100%;
+    font-size: 0.8rem;
+    background-color: var(--colorBgSecondary);
+    color: var(--colorMain);
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
 }
 
-#footer-2 {
-    width: 30%;
+.panel {
+    padding: 0 1rem;
+    font-size: 0.8rem;
+    display: none;
+    overflow: hidden;
+    background-color: var(--colorBgSecondary);
 }
 
-#footer-2 ul {
+#footer-desktop {
+    display: none;
+}
+
+#footer-links {
     display: flex;
     flex-direction: column;
 }
 
-footer ul > a {
+#footer-links a {
     text-decoration: none;
     color: var(--colorMain);
 }
 
-footer ul > a:hover {
-    color: var(--colorCTA);
+#footer-links a:hover {
+    color: var(--colorCTA)
 }
 
-#footer-3 {
-    width: 30%;
-}
 
+/* ----- DESKTOP ----- */
+
+@media only screen and (min-width: 768px) {
+
+    #mobile-menu {
+        display: none;
+    }
+
+    #site-header {
+        display: inline-block;
+    }
+
+    #site-header {
+        width: 100vw;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 1;
+        background-color: transparent;
+        font-weight: 300;
+    }
+
+    #site-header a {
+        color: var(--colorLink);
+        padding: 1rem;
+        text-decoration: none;
+    }
+
+    #site-header a:hover {
+        color: var(--colorCTA);
+    }
+
+    #logo {
+        width: 5rem;
+        height: 5rem;
+        background-color: var(--colorBgSecondary);
+    }
+
+    #icon-menu a:hover {
+        color: var(--colorCTA);
+    }
+
+
+    /* The hero image */
+    .hero-image {
+        height: 65vh;
+    }
+
+    .hero-text {
+        margin-top: 1rem;
+        width: 50%;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-text a {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    /* footer */
+
+    #footer-desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: top;
+        column-gap: 3rem;
+    }
+
+    #footer-1 {
+        width: 35%;
+    }
+
+    #footer-2 {
+        width: 30%;
+    }
+
+    #footer-2 ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footer-desktop ul>a {
+        text-decoration: none;
+        color: var(--colorMain);
+    }
+    
+    #footer-desktop ul>a:hover {
+        color: var(--colorCTA);
+    }
+
+    #footer-3 {
+        width: 30%;
+    }
+}
