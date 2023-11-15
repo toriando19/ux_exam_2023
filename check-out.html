@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/check-out.css">
+    <script src="script/script.js" defer></script>
+    <title> Checkout | StyleHub </title>
+</head>
+<body>
+
+    <section class="bread-crumbs"> <!-- Lad dem linke til steder på siden, så den highlighter/bliver mere synlig når man når til det punkt -->
+        <div>
+            <a href="#customer-info">Customer info</a>
+        </div>
+        <div>
+            <a href="#delivery">Delivery</a>
+        </div>
+        <div>
+            <a href="#payment">Payment</a>
+        </div>
+    </section>
+    
+    <section class="cart-overview">
+        <h2> Cart </h2> <!-- Dropdown som viser oversigt til kurven -->
+    </section>
+
+    <section class="customer-info">
+        <h3 id="customer-info"> Customer Info </h3>
+        <form>
+            <input id="email" type="email" placeholder="E-mail*"> <br>
+            <input id="phone-number" type="tel" placeholder="Phone number*"> <br>
+            <input id="fname" type="text" placeholder="First name*"> <br>
+            <input id="lname" type="text" placeholder="Last name*"> <br>
+        </form>
+        <form class="adress-info">
+            <input id="adress" type="text" placeholder="Adress*"> <br>
+            <input id="zip-code" type="" placeholder="Zip code*"> <input id="city" type="text" placeholder="City*"> <br>
+        </form>
+    </section>
+
+    <section class="delivery">
+        <h3 id="delivery"> Delivery </h3>
+        <form class="deliver-preferences">
+            <input id="checkbox" type="checkbox"> Standard shipping*
+            <input id="checkbox" type="checkbox"> Pakkeboks* <br>
+            <input id="repeat-adress" type="checkbox"> Deliver to same address <br> <!-- JS? Så må ikke skal skrive adressen ind 2 gange -->
+        </form>
+        <form class="adress-info">
+            <input id="adress" type="text" placeholder="Adress*"> <br>
+            <input id="zip-code" type="" placeholder="Zip code*"> <input id="city" type="text" placeholder="City*"> <br>
+        </form>
+    </section>
+
+
+</body>
+</html>
