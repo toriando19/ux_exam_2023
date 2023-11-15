@@ -11,19 +11,40 @@
 
     <section class="bread-crumbs"> <!-- Lad dem linke til steder på siden, så den highlighter/bliver mere synlig når man når til det punkt -->
         <div>
-            <a href="#customer-info">Customer info</a>
-        </div>
-        <div>
-            <a href="#delivery">Delivery</a>
-        </div>
-        <div>
+            <a href="#customer-info">Customer info</a> >
+            <a href="#delivery">Delivery</a> >
             <a href="#payment">Payment</a>
         </div>
     </section>
     
-    <section class="cart-overview">
-        <button class="dropdown"> v </button>
-        <h2> Cart </h2> <!-- Dropdown som viser oversigt til kurven -->
+    <section class="cart">
+        <div class="cart-header">
+            <button class="dropdown"> + </button>
+            <h2> Your order </h2> <!-- Dropdown som viser oversigt til kurven -->
+        </div>
+        <div class="order-info">
+            <p> 1 item(s) </p> <p> $120</p>
+            <p> Delivery </p> <p> $120</p>
+        </div>
+        <div class="order-info">
+            <p style="font-weight: bold;"> Total </p> <p style="font-weight: bold;"> $120</p>
+            <p> VAT & Taxes </p> <p> $120</p>
+        </div>
+
+        <section class="cart-overview">
+            <div class="cart-product">
+                <img src="img/hero.jpg" alt="">
+                <h3> Product name </h3>
+                <p> This is a description <br> about the product  </p>
+                <button class="remove-item"> - </button> 1 <button class="add-item"> + </button>
+            </div>
+            <div class="cart-product">
+                <img src="img/hero.jpg" alt="">
+                <h3> Product name </h3>
+                <p> This is a description <br> about the product  </p>
+                <button class="remove-item"> - </button> 1 <button class="add-item"> + </button>
+            </div>
+        </section>
     </section>
 
     <section class="customer-info">
@@ -34,8 +55,8 @@
             <input id="fname" type="text" placeholder="First name*"> <br>
             <input id="lname" type="text" placeholder="Last name*"> <br>
         </form>
-        <form class="form" id="adress-info">
-            <input id="adress" type="text" placeholder="Adress*"> <br>
+        <form class="form" id="address-info">
+            <input id="address" type="text" placeholder="Address*"> <br>
             <input class="small-input" id="zip-code" type="" placeholder="Zip code*"> <br>
             <input id="city" type="text" placeholder="City*"> <br>
         </form>
@@ -48,8 +69,8 @@
             <input id="checkbox" type="checkbox"> Pakkeboks* <br>
             <input id="repeat-adress" type="checkbox"> Deliver to same address <br> <!-- JS? Så man ikke behøver at skrive adressen ind 2 gange -->
         </form>
-        <form class="form" id="adress-info">
-            <input id="adress" type="text" placeholder="Adress*"> <br>
+        <form class="form" id="address-info">
+            <input id="address" type="text" placeholder="Address*"> <br>
             <input id="zip-code" type="" placeholder="Zip code*"> <br>
             <input id="city" type="text" placeholder="City*"> <br>
         </form>
@@ -65,6 +86,10 @@
             <input id="cvv" type="text" placeholder="CVV*"> <br>
         </form>
     </section>
+
+    <div>
+        <button class="confirm-button" onclick="submitForm()"> Confirm payment </button>
+    </div>
 
 
 </body>
