@@ -21,7 +21,11 @@
     margin-right: 0.5rem;
 }
 
-/* ///////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* MOBILE FIRST //////////////////////////////////////////////////////////////////////// */
 
 /* BREAD CRUMBS */
 
@@ -201,11 +205,182 @@
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* TABLET VERSION */
+/* TABLET VERSION //////////////////////////////////////////////////////////////////////// */
 
 @media only screen and (min-width: 550px) {
 
+    /* ///////////////////////////////////////////////////////// */
 
+/* BREAD CRUMBS */
+
+.bread-crumbs {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.bread-crumbs a {
+    text-decoration: none;
+    
+}
+
+/* ///////////////////////////////////////////////////////// */
+
+/* CART DISPLAY */
+
+.cart {
+    width: 45%;
+    float: right;
+    background-color: var(--colorLink);
+    color: var(--colorCTA);
+    padding: 0.2rem;
+    margin-bottom: 2rem;
+}
+
+.cart h2 {
+    margin-top: 1rem;
+}
+
+.dropdown {
+    float: right;
+    border: none;
+    color: #faa275;
+    font-weight: 900;
+    padding: 0.5rem;
+}
+
+.dropdown :active .order-info .cart-overview{
+    display: block;
+}
+
+/* CART OVERVIEW */
+
+.order-info {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    margin-top: 1rem; 
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: var(--colorMain);
+}
+
+.order-info p{
+    margin: -0px;
+}
+
+.cart-overview {
+    margin-top: 1rem;
+}
+
+.cart-product {
+    background-color: var(--basicColor);
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cart-product img {
+    width: 30%;
+    float: left;
+    margin-right: 15px;
+}
+
+.cart-product h3 {
+    color: #0b0d0a;
+    font-size: 16px;
+}
+
+.cart-product p {
+    color: #0b0d0a;
+    font-size: 12px;
+}
+
+.cart-price {
+    color: #0b0d0a;
+    text-align: right;
+}
+
+.cart-price p {
+    font-size: 12px;
+}
+
+.remove-item {
+    background-color: var(--colorBgSecondary);
+    border: none;
+}
+
+.add-item {
+    background-color: var(--colorBgSecondary);
+    border: none;
+}
+
+
+/* ///////////////////////////////////////////////////////// */
+
+/* STYLING OF FORMS */
+
+.form {
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
+
+.form input {
+    background-color: var(--colorBgSecondary);
+    border: none;
+    padding: 10px;
+    margin-bottom: 0.2rem;
+    width: 45%;
+}
+
+/* ///////////////////////////////////////////////////////// */
+
+/* CUSTOMER INFO */
+
+.customer-info {
+    margin-bottom: 10px;
+}
+
+.customer-info h3 {
+    color: var(--colorSecondary);
+}
+
+/* ///////////////////////////////////////////////////////// */
+
+/* DELIVERY */
+
+.deliver-preferences {
+    margin-bottom: 1rem;
+}
+
+.delivery h3 {
+    color: var(--colorSecondary);
+}
+
+
+/* ///////////////////////////////////////////////////////// */
+
+/* PAYMENT */
+
+.payment h3 {
+    color: var(--colorSecondary);
+}
+
+
+/* ///////////////////////////////////////////////////////// */
+
+/* CONFIRM */
+
+.confirm-button {
+    padding: 0.5rem;
+    align-items: center;
+    background-color: var(--colorCTA);
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+/* ///////////////////////////////////////////////////////// */
 
 
 
@@ -220,7 +395,7 @@
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
-/* TABLET VERSION */
+/* DESKTOP VERSION //////////////////////////////////////////////////////////////////////// */
 
 @media only screen and (min-width: 850px) {
 
