@@ -1,0 +1,109 @@
+/* DESIGN GUIDE */
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600&family=Poppins:ital,wght@0,200;0,300;0,500;1,600&display=swap');
+
+:root {
+    --colorMain: #0b0d0a;
+    --colorSecondary: #001c55;
+    --colorLink: #f7f7f7;
+    --colorBgMain: #f7f7f7;
+    --colorBgSecondary: #E4F2FF;
+    --colorCTA: #faa275;
+
+    --fontHeader: 'League Spartan', sans-serif;
+    --fontMain: 'Poppins', sans-serif;
+}
+
+*{
+    margin-top: 0;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+/* ///////////////////////////////////////////////////////// */
+
+/* BREAD CRUMBS */
+
+.bread-crumbs {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.bread-crumbs a {
+    text-decoration: none;
+}
+
+/* ///////////////////////////////////////////////////////// */
+
+/* CART DISPLAY */
+
+.cart-overview {
+    background-color: var(--colorSecondary);
+    color: var(--colorCTA);
+    padding: 1px;
+    margin-bottom: 2rem;
+}
+
+.dropdown {
+    float: right;
+    background-color: #001c55;
+    border: none;
+    color: #faa275;
+}
+
+/* ///////////////////////////////////////////////////////// */
+
+/* STYLING OF FORMS */
+
+.form {
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
+
+.form input {
+    background-color: var(--colorBgSecondary);
+    border: none;
+    padding: 10px;
+    margin-bottom: 0.2rem;
+    width: 90%;
+}
+
+/* ///////////////////////////////////////////////////////// */
+
+/* CUSTOMER INFO */
+
+.customer-info {
+    margin-bottom: 10px;
+}
+
+.customer-info h3 {
+    color: var(--colorSecondary);
+}
+
+/* ///////////////////////////////////////////////////////// */
+
+/* DELIVERY */
+
+.deliver-preferences {
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+/* ///////////////////////////////////////////////////////// */
+
+/* PAYMENT */
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////////// */
+
+
+
+
