@@ -121,7 +121,7 @@
 
 /* The hero image */
 .hero-image {
-    background-image: url('../img/hero.jpg');
+    background-image: url('../img/hero.jpg'); /* Photo by <a href="https://unsplash.com/@freestocks?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">freestocks</a> on <a href="https://unsplash.com/photos/photo-of-woman-holding-white-and-black-paper-bags-_3Q3tsJ01nc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -141,18 +141,19 @@
 
 .hero-text h1 {
     font-size: 2rem;
+    color: var(--colorSecondary);
 }
 
 .hero-text a {
     text-decoration: none;
-    color: var(--colorLink);
+    color: var(--colorSecondary);
     padding: 0.8rem;
     line-height: 2;
     font-size: 0.8rem;
 }
 
 .hero-text a:hover {
-    background-color: var(--colorBgSecondary);
+    background-color: var(--colorCTA);
     border-radius: 35px;
     color: var(--colorSecondary)
 }
@@ -161,6 +162,7 @@
     padding: 1rem;
     font-size: 0.8rem;
     font-weight: 300;
+    color: var(--colorSecondary);
 }
 
 /* footer */
@@ -239,11 +241,11 @@ footer {
         overflow: hidden;
         z-index: 1;
         background-color: transparent;
-        font-weight: 300;
+        font-weight: 400;
     }
 
     #site-header a {
-        color: var(--colorLink);
+        color: var(--colorSecondary);
         padding: 1rem;
         text-decoration: none;
     }
