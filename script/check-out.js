@@ -34,18 +34,19 @@ function cart_dropdown() {
     }
 }
 
-function toggleSection() {
-    var section = document.getElementById('sectionToToggle');
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    // Toggle the visibility of the section
-    if (section.style.display === 'none' || section.style.display === '') {
-        section.style.display = 'block';
-    } else {
-        section.style.display = 'none';
-    }
+// Choose delivery ///////////////////////////////////////////////////////////////////////////
+
+function delivery(checkbox) {
+    var checkboxes = document.getElementsById('checkbox');
+
+    checkboxes.forEach(function (currentCheckbox) {
+        if (currentCheckbox !== checkbox) {
+            currentCheckbox.checked = false;
+        }
+    });
 }
-
-
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
