@@ -7,7 +7,7 @@ document.addEventListener('scroll', function () {
   let scrollPos = window.pageYOffset;
 
   if (scrollPos > 100) {
-    header.style.backgroundColor = "#001c55";
+    header.style.backgroundColor = "#E4F2FF";
   } else {
     header.style.backgroundColor = "transparent";
   }

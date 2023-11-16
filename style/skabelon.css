@@ -29,7 +29,7 @@
     border: none;
     color: var(--colorLink);
     position: absolute;
-    top: 1.5rem;
+    top: 0.7rem;
     right: 20px;
     width: 36px;
     height: 36px;
@@ -69,10 +69,12 @@
 }
 
 #logo {
-    width: 2.8rem;
-    height: 2.8rem;
-    background-color: var(--colorBgSecondary);
-}
+    width: 4rem;
+    height: 1rem;
+    background-image: url('../img/StyleHub-blue.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
 
 #icon-menu a {
     color: var(--colorLink);
@@ -255,9 +257,8 @@ footer {
     }
 
     #logo {
-        width: 5rem;
-        height: 5rem;
-        background-color: var(--colorBgSecondary);
+        width: 12rem;
+        height: 3rem;
     }
 
     #icon-menu a:hover {
