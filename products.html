@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
+    <title>Skabelon</title>
+</head>
+
+<body>
+
+    <div id="mobile-menu">
+        <div id="logo">
+            <img src="logo" alt="">
+        </div>
+        <a class="hamburger" href="#navbar" aria-label="Open main menu">
+            <span class="sr-only">Open main menu</span>
+            <span class="material-symbols-outlined" alt="open button." aria-hidden="true">menu</span></a>
+        <nav id="navbar">
+            <a href="http://">Home</a>
+            <a href="http://">New arrivals</a>
+            <a href="http://">Trending</a>
+            <a href="http://">All products</a>
+            <div id="icon-menu">
+                <a href="http://"><span class="material-symbols-outlined" id="search-icon" onclick="removeClass()">search</span></a>
+                <a href="http://"><span class="material-symbols-outlined">person</span></a>
+                <a href="http://"><span class="material-symbols-outlined">shopping_basket</span></a>
+            </div>
+            <a class="close" href="#" aria-label="Close main menu">
+                <span class="sr-only">Close main menu</span>
+                <span class="material-symbols-outlined" alt="close button." aria-hidden="true">close</span></a>
+        </nav>
+    </div>
+
+    <header id="site-header">
+        <div id="logo">
+            <img src="logo" alt="">
+        </div>
+        <nav>
+            <a href="http://">Home</a>
+            <a href="http://">New arrivals</a>
+            <a href="http://">Trending</a>
+            <a href="http://">All products</a>
+        </nav>
+        <div id="icon-menu">
+            <a href="http://"><span class="material-symbols-outlined" id="search-icon" onclick="removeClass()">search</span></a>
+            <a href="http://"><span class="material-symbols-outlined">person</span></a>
+            <a href="http://"><span class="material-symbols-outlined">shopping_basket</span></a>
+        </div>
+    </header>
+    
+    <div class="hidden blur-container" id="search-container">
+        <div id="search">
+            <span class="material-symbols-outlined">search</span>
+            <input type="text" id="search-bar" placeholder="Search...">
+            <span class="material-symbols-outlined" id="close-button" alt="close button." onclick="addClass()">close</span>
+        </div>
+    </div>
+   
+    <section class="hero-image" loading="lazy">
+        <div class="hero-text">
+            <h1>TEXT</h1>
+            <ul id="category-menu">
+                <a href="http://">Produkt</a>
+                <a href="http://">Produkt</a>
+                <a href="http://">Produkt</a>
+                <a href="http://">Produkt</a>
+            </ul>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat dignissim velit sed varius. Sed
+                pulvinar, justo in eleifend rhoncus, risus lorem condimentum sem, et iaculis libero nisl in elit.
+                Vivamus dignissim elit nibh, eget vehicula nibh tristique non.
+            </p>
+        </div>
+    </section>
+
+    <main>
+        <div class="product-page">
+            <section class="filter">
+            </section>
+            <section class="products" id="product-list">
+                <!-- Product cards will be dynamically added here -->
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div id="footer-mobile">
+            <button class="accordion">StyleHub <span class="material-symbols-outlined float" >keyboard_arrow_down</span></button>
+            <div class="panel">
+                <p>Content for Section 1 goes here.</p>
+            </div>
+    
+            <button class="accordion">Links <span class="material-symbols-outlined float" >keyboard_arrow_down</span></button>
+            <div class="panel">
+                <p>                
+                    <ul id="footer-links">
+                        <a href="http://">Kontakt os</a>
+                        <a href="http://">Returnering</a>
+                        <a href="http://">Handelsbetingelser</a>
+                        <a href="http://">Persondata- og cookiepolitik</a>
+                    </ul>
+                </p>
+            </div>
+    
+            <button class="accordion">Nyhedsbrev <span class="material-symbols-outlined float" >keyboard_arrow_down</span></button>
+            <div class="panel">
+                <p>Content for Section 3 goes here.</p>
+            </div>
+
+            <div>
+                <div id="logo-footer">
+                    <img src="img/StyleHub-blue.svg">
+                </div>
+            </div>
+        </div>
+        
+        <div id="footer-desktop">
+            <section id="footer-1">
+                <h4>StyleHub</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat dignissim velit sed varius. Sed
+                    pulvinar, justo in eleifend rhoncus, risus lorem condimentum sem, et iaculis libero nisl in elit.
+                    Vivamus dignissim elit nibh, eget vehicula nibh tristique non.
+                </p>
+            </section>
+            <section id="footer-2">
+                <h4>Links</h4>
+                <ul>
+                    <a href="http://">Kontakt os</a>
+                    <a href="http://">Returnering</a>
+                    <a href="http://">Handelsbetingelser</a>
+                    <a href="http://">Persondata- og cookiepolitik</a>
+                </ul>
+            </section>
+            <section id="footer-3">
+                <h4>Nyhedsbrev</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat dignissim velit sed varius.</p>
+                <div>
+                    <div id="logo-footer">
+                        <img src="img/StyleHub-blue.svg">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <script src="script/api.js"></script>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

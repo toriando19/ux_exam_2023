@@ -1,5 +1,5 @@
 // Change header background color when scrolling
-let header = document.getElementById('site-header');
+const header = document.getElementById('site-header');
 
 document.addEventListener('scroll', function () {
   // Get the scroll position
@@ -29,11 +29,11 @@ for (let i = 0; i < acc.length; i++) {
 
 // Search bar visibility
 function removeClass() {
-  let searchContainer = document.getElementById('search-container');
+  const searchContainer = document.getElementById('search-container');
     searchContainer.classList.remove('hidden'); // visible
 }
 
 function addClass() {
-  let searchContainer = document.getElementById('search-container');
+  const searchContainer = document.getElementById('search-container');
     searchContainer.classList.add('hidden'); // hidden
 }

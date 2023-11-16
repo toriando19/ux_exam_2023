@@ -6,6 +6,37 @@
 
 /* ----- TABLET ----- */
 
+@media only screen and (min-width: 600px) {
+   
+}
+
 
 
 /* ----- DESKTOP ----- */
+
+@media only screen and (min-width: 768px) {
+
+    .product-page {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       width: 100vw;
+    }
+
+    .filter {
+        width: 20vw;
+        background-color: var(--colorSecondary);
+    }
+
+    .products {
+        width: 65vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .product {
+        width: 30%;
+    }
+
+}
