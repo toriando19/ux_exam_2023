@@ -39,4 +39,3 @@ function addClass() {
   let searchContainer = document.getElementById('search-container');
     searchContainer.classList.add('hidden');
 }
-
