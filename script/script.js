@@ -1,19 +1,18 @@
-// Change header background color
+// Change header background color when scrolling
 let header = document.getElementById('site-header');
 
 document.addEventListener('scroll', function () {
-
   // Get the scroll position
   let scrollPos = window.pageYOffset;
 
   if (scrollPos > 100) {
-    header.style.backgroundColor = "#E4F2FF";
+    header.style.backgroundColor = "#E4F2FF"; // Gets blue when scrolling
   } else {
-    header.style.backgroundColor = "transparent";
+    header.style.backgroundColor = "transparent"; // Transparent when not scrolling
   }
 });
 
-// Accordion
+// Accordion menu in footer
 let acc = document.getElementsByClassName("accordion");
 
 for (let i = 0; i < acc.length; i++) {
@@ -29,13 +28,12 @@ for (let i = 0; i < acc.length; i++) {
 }
 
 // Search bar visibility
-
 function removeClass() {
   let searchContainer = document.getElementById('search-container');
-    searchContainer.classList.remove('hidden');
+    searchContainer.classList.remove('hidden'); // visible
 }
 
 function addClass() {
   let searchContainer = document.getElementById('search-container');
-    searchContainer.classList.add('hidden');
+    searchContainer.classList.add('hidden'); // hidden
 }

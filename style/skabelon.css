@@ -71,7 +71,7 @@
 #logo {
     width: 4rem;
     height: 1rem;
-    background-image: url('../img/StyleHub-blue.svg');
+    background-image: url('../img/StyleHub.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;}
@@ -88,7 +88,7 @@
 
 #search {
     position: fixed;
-    top: 15rem;
+    top: 20rem;
     left: 0;    
     padding: 2rem;
     background-color: var(--colorSecondary);
@@ -185,10 +185,13 @@ footer {
     padding: 1rem;
     width: 100%;
     text-align: left;
-    align-items: center;
     border: none;
     outline: none;
     transition: 0.4s;
+}
+
+.float {
+    float: inline-end;
 }
 
 .panel {
@@ -217,17 +220,23 @@ footer {
     color: var(--colorCTA)
 }
 
+#logo-footer {
+    display: block;
+    margin: auto;
+    padding: auto;
+    width: 50%;
+}
 
-/* ----- DESKTOP ----- */
+/* ----- TABLET ----- */
 
-@media only screen and (min-width: 768px) {
-
+@media only screen and (min-width: 600px) {
     #mobile-menu {
         display: none;
     }
 
     #site-header {
         display: inline-block;
+        backdrop-filter: blur(2px);
     }
 
     #site-header {
@@ -243,12 +252,13 @@ footer {
         overflow: hidden;
         z-index: 1;
         background-color: transparent;
+        font-size: 0.8rem;
         font-weight: 400;
     }
 
     #site-header a {
         color: var(--colorSecondary);
-        padding: 1rem;
+        padding: 0.5rem;
         text-decoration: none;
     }
 
@@ -257,8 +267,13 @@ footer {
     }
 
     #logo {
-        width: 12rem;
-        height: 3rem;
+        background-image: url('../img/StyleHub-blue.svg');
+        width: 7rem;
+        height: 1.7rem;
+    }
+
+    #icon-menu a {
+        padding: 0.2rem;
     }
 
     #icon-menu a:hover {
@@ -266,11 +281,37 @@ footer {
     }
 
     #search {
-        top: 7rem;
+        top: 0rem;
+        height: 100vh;
+        backdrop-filter: blur(5px);
+        background-color: transparent;
     }
 
     #search-bar {
         width: 90vw;
+    }
+
+    
+
+}
+
+
+
+/* ----- DESKTOP ----- */
+
+@media only screen and (min-width: 768px) {
+
+    #site-header a {
+        color: var(--colorSecondary);
+        padding: 1rem;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    #logo {
+        background-image: url('../img/StyleHub-blue.svg');
+        width: 12rem;
+        height: 3rem;
     }
 
     /* The hero image */
@@ -335,5 +376,9 @@ footer {
 
     #footer-3 {
         width: 30%;
+    }
+
+    #logo-footer {
+        padding: 0.5rem;
     }
 }
