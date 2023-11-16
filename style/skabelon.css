@@ -139,7 +139,6 @@
     transform: translate(-50%, -50%);
     color: var(--colorLink);
     width: 100%;
-    backdrop-filter: blur(2px);
 }
 
 .hero-text h1 {
@@ -238,7 +237,6 @@ footer {
 
     #site-header {
         display: inline-block;
-        backdrop-filter: blur(2px);
     }
 
     #site-header {
