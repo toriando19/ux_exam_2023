@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/check-out.css">
-    <script src="script/script.js" defer></script>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/check-out.js" defer></script>
     <title> Checkout | StyleHub </title>
 </head>
 <body>
@@ -18,32 +18,35 @@
     </section>
     
     <section class="cart">
-        <div class="cart-header">
-            <button class="dropdown"> + </button>
-            <h2> Your order </h2> <!-- Dropdown som viser oversigt til kurven -->
-        </div>
-        <div class="order-info">
-            <p> 1 item(s) </p> <p> $120</p>
-            <p> Delivery </p> <p> $120</p>
-        </div>
-        <div class="order-info">
-            <p style="font-weight: bold;"> Total </p> <p style="font-weight: bold;"> $120</p>
-            <p> VAT & Taxes </p> <p> $120</p>
-        </div>
+            <div class="cart-header">
+                <button id="cart_dropdown" class="dropdown" onclick="cart_dropdown()"> + </button>
+                <h2> Your order </h2> <!-- Dropdown som viser oversigt til kurven -->
+            </div>
 
-        <section class="cart-overview">
-            <div class="cart-product">
-                <img src="img/hero.jpg" alt="">
-                <h3> Product name </h3>
-                <p> This is a description <br> about the product  </p>
-                <button class="remove-item"> - </button> 1 <button class="add-item"> + </button>
+        <section id="order-info">
+            <div class="order-info">
+                <p>1 item(s)</p> <p>$120</p>
+                <p>Delivery</p> <p>$120</p>
             </div>
-            <div class="cart-product">
-                <img src="img/hero.jpg" alt="">
-                <h3> Product name </h3>
-                <p> This is a description <br> about the product  </p>
-                <button class="remove-item"> - </button> 1 <button class="add-item"> + </button>
+            <div id="order-info" class="order-info">
+                <p style="font-weight: bold;"> Total </p> <p style="font-weight: bold;"> $120</p>
+                <p> VAT & Taxes </p> <p> $120</p>
             </div>
+
+            <section id="cart-overview" class="cart-overview">
+                <div class="cart-product">
+                    <img src="img/hero.jpg" alt="">
+                    <h3> Product name </h3>
+                    <p> This is a description <br> about the product  </p>
+                    <button class="remove-item"> - </button> 1 <button class="add-item"> + </button>
+                </div>
+                <div class="cart-product">
+                    <img src="img/hero.jpg" alt="">
+                    <h3> Product name </h3>
+                    <p> This is a description <br> about the product  </p>
+                    <button class="remove-item"> - </button> 1 <button class="add-item"> + </button>
+                </div>
+            </section>
         </section>
     </section>
 
@@ -57,7 +60,7 @@
         </form>
         <form class="form" id="address-info">
             <input id="address" type="text" placeholder="Address*"> <br>
-            <input class="small-input" id="zip-code" type="" placeholder="Zip code*"> <br>
+            <input class="small-input" id="zip-code" type="text" placeholder="Zip code*"> <br>
             <input id="city" type="text" placeholder="City*"> <br>
         </form>
     </section>
@@ -67,11 +70,11 @@
         <form class="deliver-preferences" id="deliver-preferences">
             <input id="checkbox" type="checkbox"> Standard shipping*
             <input id="checkbox" type="checkbox"> Pakkeboks* <br>
-            <input id="repeat-adress" type="checkbox"> Deliver to same address <br> <!-- JS? Så man ikke behøver at skrive adressen ind 2 gange -->
+            <input id="repeat-address" type="checkbox" onchange="same_address()"> Deliver to same address <br> <!-- JS? Så man ikke behøver at skrive adressen ind 2 gange -->
         </form>
-        <form class="form" id="address-info">
+        <form class="form" id="repeat-address-info">
             <input id="address" type="text" placeholder="Address*"> <br>
-            <input id="zip-code" type="" placeholder="Zip code*"> <br>
+            <input id="zip-code" type="text" placeholder="Zip code*"> <br>
             <input id="city" type="text" placeholder="City*"> <br>
         </form>
     </section>
@@ -81,8 +84,8 @@
         <form class="form">
             <input id="cname" type="text" placeholder="Name on card*"> <br>
             <input id="ccnumber" type="text" placeholder="Credit card number*"> <br>
-            <input id="expmonth" type="text" placeholder="Exp month*">
-            <input id="expyear" type="text" placeholder="Exp year*">
+            <input id="expmonth" type="text" placeholder="Exp month*"> <br>
+            <input id="expyear" type="text" placeholder="Exp year*"> <br>
             <input id="cvv" type="text" placeholder="CVV*"> <br>
         </form>
     </section>
