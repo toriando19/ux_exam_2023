@@ -157,7 +157,7 @@
 
 .hero-text a:hover {
     background-color: var(--colorCTA);
-    border-radius: 35px;
+    border-radius: 2.2rem;
     color: var(--colorSecondary)
 }
 
