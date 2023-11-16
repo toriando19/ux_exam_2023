@@ -139,6 +139,7 @@
     transform: translate(-50%, -50%);
     color: var(--colorLink);
     width: 100%;
+    backdrop-filter: blur(2px);
 }
 
 .hero-text h1 {
@@ -223,6 +224,7 @@ footer {
 #logo-footer {
     display: block;
     margin: auto;
+    margin-top: 1rem;
     padding: auto;
     width: 50%;
 }
@@ -290,8 +292,6 @@ footer {
     #search-bar {
         width: 90vw;
     }
-
-    
 
 }
 

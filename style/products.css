@@ -6,6 +6,50 @@
 
 /* ----- TABLET ----- */
 
+@media only screen and (min-width: 600px) {
+   
+}
+
 
 
 /* ----- DESKTOP ----- */
+
+@media only screen and (min-width: 768px) {
+
+    .product-page {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       width: 100vw;
+    }
+
+    .filter {
+        width: 20vw;
+        background-color: var(--colorSecondary);
+    }
+
+    .products {
+        width: 65vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 1rem;
+    }
+
+    .product {
+        width: 20vw;
+        margin: 0.5rem;
+    }
+
+    .product img {
+        display: block;
+        width: 20vw;
+        height: 35vh;
+        object-fit: contain;
+    }
+
+    .price {
+        font-weight: 300;
+    }
+
+}
