@@ -111,6 +111,7 @@
     border-radius: 35px;
     border: none;
     color: var(--colorMain);
+    background-color: var(--colorBgMain);
 }
 
 #close-button {
@@ -139,7 +140,6 @@
     transform: translate(-50%, -50%);
     color: var(--colorLink);
     width: 100%;
-    backdrop-filter: blur(2px);
 }
 
 .hero-text h1 {
@@ -157,7 +157,7 @@
 
 .hero-text a:hover {
     background-color: var(--colorCTA);
-    border-radius: 35px;
+    border-radius: 2.2rem;
     color: var(--colorSecondary)
 }
 
@@ -238,7 +238,6 @@ footer {
 
     #site-header {
         display: inline-block;
-        backdrop-filter: blur(2px);
     }
 
     #site-header {
