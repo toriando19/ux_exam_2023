@@ -111,6 +111,7 @@
     border-radius: 35px;
     border: none;
     color: var(--colorMain);
+    background-color: var(--colorBgMain);
 }
 
 #close-button {
