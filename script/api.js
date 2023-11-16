@@ -30,9 +30,14 @@
       price.textContent = `$${product.price}`;
       price.classList.add('price'); // adds class 'price'
 
+      const buyBtn = document.createElement('button');
+      buyBtn.textContent = 'Buy';
+      buy.classList.add('buy-btn');
+
       // Append image, title, and price to the product card
       productCard.appendChild(image);
       productCard.appendChild(title);
+      productCard.appendChild(price);
       productCard.appendChild(price);
 
       // Append the product card to the product list container
