@@ -53,13 +53,13 @@
 
     <section class="customer-info">
         <h3 id="customer-info"> Customer Info </h3>
-        <form class="form">
+        <form class="check-out-form">
             <input id="email" type="email" placeholder="E-mail*"> <br>
             <input id="phone-number" type="tel" placeholder="Phone number*"> <br>
             <input id="fname" type="text" placeholder="First name*"> <br>
             <input id="lname" type="text" placeholder="Last name*"> <br>
         </form>
-        <form class="form" id="address-info">
+        <form class="check-out-form" id="address-info">
             <h3 id="delivery"> Billing address </h3>
             <input id="address" type="text" placeholder="Address*"> <br>
             <input class="small-input" id="zip-code" type="text" placeholder="Zip code*"> <br>
@@ -74,7 +74,7 @@
             <input id="checkbox" type="checkbox"> Pakkeboks* <br>
             <input id="repeat-address" type="checkbox" onchange="same_address()"> Deliver to same address <br> <!-- JS? Så man ikke behøver at skrive adressen ind 2 gange -->
         </form>
-        <form class="form" id="repeat-address-info">
+        <form class="check-out-form" id="repeat-address-info">
             <h3 id="delivery"> Delivery address </h3>
             <input id="address" type="text" placeholder="Address*"> <br>
             <input id="zip-code" type="text" placeholder="Zip code*"> <br>
@@ -84,7 +84,7 @@
 
     <section class="payment">
         <h3 id="payment"> Payment </h3>
-        <form class="form">
+        <form class="check-out-form">
             <input id="cname" type="text" placeholder="Name on card*"> <br>
             <input id="ccnumber" type="text" placeholder="Credit card number*"> <br>
             <input id="expmonth" type="text" placeholder="Exp month*"> <br>
@@ -93,17 +93,64 @@
         </form>
     </section>
 
-    <div>
-        <button class="confirm-button" onclick="submitForm()"> Confirm payment </button>
-    </div>
+    <button class="confirm-button" onclick="submitForm()"> Confirm payment </button>
 
 
-    <section class="confirm-pop-up">
+    <section id="confirm-pop-up" class="confirm-pop-up">
         <section class="confirm-pop-up-window">
-            <h1> Hej </h1>
+            <button id="cart_dropdown" class="edit-customer-info" onclick="closePopup()"> ✎ </button>
+            <h3> Confirm transaction </h3>
+
+        <section class="cart2">
+                <div class="cart-header2">
+                    <h4> Your order </h4> 
+                </div>
+    
+            <section id="order-info">
+                <div class="order-info">
+                    <p>1 item(s)</p> <p>$120</p>
+                    <p>Delivery</p> <p>$120</p>
+                </div>
+                <div id="order-info" class="order-info">
+                    <p style="font-weight: bold;"> Total </p> <p style="font-weight: bold;"> $120</p>
+                    <p> VAT & Taxes </p> <p> $120</p>
+                </div>
+            </section>
         </section>
-               
+
+    
+        <section class="confirm-customer-info">
+            <div>
+                <p style="font-weight: bold;"> Email</p>        
+                <p style="font-weight: bold;"> Phone</p>        
+                <p style="font-weight: bold;"> Name</p>         
+            </div>
+            <div> 
+                <p>$a@a.dk</p>
+                <p>+45 12 34 56 78</p>
+                <p>A Aa</p>
+            </div>
+            <div class="confirm-address">       
+                <p style="font-weight: bold;"> Billing address </p>     
+                <p>Testway 12 <br> 1234 City <br> Denmark </p>
+            </div>
+            <div class="confirm-address"> 
+                <p style="font-weight: bold;"> Shipping address </p>  
+                <p>Testway 12 <br> 1234 City <br> Denmark </p>
+            </div>
+        </section>
+
+        <section class="confirm-customer-info">
+            <p style="font-weight: bold;"> Card </p>     <p>1234-5678-9123-4567 <br> 12 / 34  <br> 012 </p>
+        </section>
+        
+        
+        <div class="confirm-buttons">
+            <button class="cancel-purchase" onclick="closePopup()"> Cancel </button>
+            <button class="confirm-purchase" onclick=""> Confirm purchase </button>
+        </div>
     </section>
+               
 
 
 </body>

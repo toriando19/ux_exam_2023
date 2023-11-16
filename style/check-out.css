@@ -117,12 +117,12 @@
 
 /* STYLING OF FORMS */
 
-.form {
+.check-out-form {
     margin-left: 0;
     margin-bottom: 1rem;
 }
 
-.form input {
+.check-out-form input {
     background-color: var(--colorBgSecondary);
     border: none;
     padding: 10px;
@@ -191,7 +191,7 @@
 /* (DOUBLE) CONFIRM PAYMENT - POP-UP */
 
 .confirm-pop-up {
-    /* display: none; */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -207,6 +207,78 @@
 .confirm-pop-up-window {
     background-color: #eaeaea;
     padding: 0.5rem;
+}
+
+.confirm-pop-up-window h3 {
+    color: var(--colorCTA);
+    font-size: 20px;
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+
+.confirm-customer-info {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    font-weight: 300;
+}
+
+.edit-customer-info {
+    float: right;
+    border: none;
+    color: var(--basicColor);
+    background-color: var(--colorCTA);
+    font-weight: 900;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 1rem;
+    font-size: 25px;
+}
+
+.cart2 {
+    background-color: var(--basicColor);
+    color: var(--colorCTA);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.cart-header2 {
+    margin: 1rem;
+}
+
+.cart2 h4 {
+    margin-top: 1rem;
+    font-size: 18px;
+}
+
+.confirm-address {
+    margin-top: 1rem;
+}
+
+.confirm-buttons {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.cancel-purchase {
+    padding: 0.5rem;
+    align-items: center;
+    background-color: var(--basicColor);
+    font-size: 15px;
+    border: solid;
+    border-width: 1px;
+    border-color: var(--colorCTA);
+}
+
+.confirm-purchase {
+    padding: 0.5rem;
+    align-items: center;
+    background-color: var(--colorCTA);
+    border: none;
+    font-size: 15px;
 }
 
 

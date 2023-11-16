@@ -27,7 +27,7 @@ function cart_dropdown() {
     var section = document.getElementById('order-info');   // Creating the variable of the section, that is linked to the "repeat-address-info"-section in the "check-out.html"
 
      // Toggle the visibility of the section
-     if (section.style.display === 'none' || section.style.display === '') {
+     if (section.style.display === 'none' ) {
         section.style.display = 'grid';
     } else {
         section.style.display = 'none';
@@ -65,6 +65,38 @@ function same_address() {
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Confirm payment - pop-up ///////////////////////////////////////////////////////////////////////////
+
+function submitForm() {
+    var section = document.getElementById('confirm-pop-up');   // Creating the variable of the section, that is linked to the "repeat-address-info"-section in the "check-out.html"
+
+     // Toggle the visibility of the section
+     if (section.style.display === 'none') {
+        section.style.display = 'grid';
+    } else {
+        section.style.display = 'none';
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Cancel payment - close pop-up ///////////////////////////////////////////////////////////////////////////
+
+function closePopup() {
+    var section = document.getElementById('confirm-pop-up');   // Creating the variable of the section, that is linked to the "repeat-address-info"-section in the "check-out.html"
+
+     // Toggle the visibility of the section
+     if (section.style.display === 'grid') {
+        section.style.display = 'none';
+    } else {
+        section.style.display = 'grid';
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 
