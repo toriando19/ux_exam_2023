@@ -161,6 +161,12 @@
     color: var(--colorSecondary)
 }
 
+.active {
+    background-color: var(--colorCTA);
+    border-radius: 2.2rem;
+    color: var(--colorSecondary)
+}
+
 .hero-text p {
     padding: 1rem;
     font-size: 0.8rem;

@@ -25,6 +25,7 @@ fetch('https://fakestoreapi.com/products')
 
             const title = document.createElement('h4'); // product title
             title.textContent = product.title;
+            title.classList.add('product-title'); // adds class 'product-title'
 
             const price = document.createElement('p'); // product price
             price.textContent = `$${product.price}`;
@@ -36,6 +37,7 @@ fetch('https://fakestoreapi.com/products')
             buyButton.classList.add('buy-button');
 
             // Append image, title, price and button to the product card
+            // appendChild is used to append (or add) an HTML element as a child to another element in the DOM
             productCard.appendChild(image);
             productCard.appendChild(title);
             productCard.appendChild(price);
