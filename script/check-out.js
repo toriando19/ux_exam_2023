@@ -34,6 +34,39 @@ function cart_dropdown() {
     }
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Your order: Calculations /////////////////////////////////////////////////////////////////////////////////////
+
+var itemCount = 1;
+var itemPrice = 120;
+var deliveryPrice = 120;
+
+// Variable to accumulate the total
+var totalAccumulator = (itemCount * itemPrice) + deliveryPrice;
+
+function updateOrderInfo() {
+    var itemCountElement = document.getElementById('itemCount');
+    var itemPriceElement = document.getElementById('itemPrice');
+    var deliveryPriceElement = document.getElementById('deliveryPrice');
+    var totalElement = document.getElementById('totalPrice');
+    var vatTaxesElement = document.getElementById('vatTaxesPrice');
+
+    // Update item count and prices
+    itemCountElement.textContent = itemCount + ' item(s)';
+    itemPriceElement.textContent = '$' + (itemCount * itemPrice);
+    deliveryPriceElement.textContent = '$' + deliveryPrice;
+
+    // Calculate total, including VAT & Taxes
+    totalAccumulator = (itemCount * itemPrice) + deliveryPrice;
+    var vatTaxes = totalAccumulator * 0.2; // Assuming VAT and Taxes are 20%
+    
+    totalElement.textContent = '$' + totalAccumulator;
+    vatTaxesElement.textContent = '$' + vatTaxes;
+}
+
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Choose delivery ///////////////////////////////////////////////////////////////////////////
@@ -77,6 +110,20 @@ function submitForm() {
     } else {
         section.style.display = 'none';
     }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Summary in popup - view filled form ///////////////////////////////////////////////////////////////////////////
+
+function summary() {
+    // Get form values
+    var email = document.getElementById('email').value.trim();
+    var name = document.getElementById('fname').value.trim() + ' ' + document.getElementById('lname').value.trim();
+
+    // Display summary in the popup
+    document.getElementById('popup-confirm-Email').textContent = 'Email: ' + email;
+    document.getElementById('popup-confirm-Name').textContent = 'Name: ' + name;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////

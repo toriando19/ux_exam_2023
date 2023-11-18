@@ -8,6 +8,7 @@
 /* BREAD CRUMBS */
 
 .bread-crumbs {
+    display: none;
     margin-top: 2rem;
     margin-bottom: 2rem;
     margin-left: 1rem;
@@ -28,6 +29,7 @@
     margin-bottom: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-top: 2rem;
 }
 
 .cart-header {
@@ -44,10 +46,10 @@
     color: var(--basicColor);
     background-color: var(--colorCTA);
     font-weight: 900;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
 }
 
 /* CART OVERVIEW */
@@ -104,12 +106,14 @@
     background-color: var(--colorBgSecondary);
     border: none;
     margin-top: 1rem;
+    padding: 0.3rem;
 }
 
 .add-item {
     background-color: var(--colorBgSecondary);
     border: none;
     margin-top: 1rem;
+    padding: 0.3rem;
 }
 
 
@@ -281,9 +285,9 @@
     font-size: 15px;
 }
 
-
-
 /* ///////////////////////////////////////////////////////// */
+
+
 
 
 

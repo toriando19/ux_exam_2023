@@ -6,9 +6,58 @@
     <link rel="stylesheet" href="style/style.css">
     <script src="script/script.js" defer></script>
     <script src="script/check-out.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
     <title> Checkout | StyleHub </title>
 </head>
 <body>
+
+    <div id="mobile-menu">
+        <div id="logo">
+            <img src="logo" alt="">
+        </div>
+        <a class="hamburger" href="#navbar" aria-label="Open main menu">
+            <span class="sr-only">Open main menu</span>
+            <span class="material-symbols-outlined" alt="open button." aria-hidden="true">menu</span></a>
+        <nav id="navbar">
+            <a href="http://">Home</a>
+            <a href="http://">New arrivals</a>
+            <a href="http://">Trending</a>
+            <a href="http://">All products</a>
+            <div id="icon-menu">
+                <a href="http://"><span class="material-symbols-outlined" id="search-icon" onclick="removeClass()">search</span></a>
+                <a href="http://"><span class="material-symbols-outlined">person</span></a>
+                <a href="http://"><span class="material-symbols-outlined">shopping_basket</span></a>
+            </div>
+            <a class="close" href="#" aria-label="Close main menu">
+                <span class="sr-only">Close main menu</span>
+                <span class="material-symbols-outlined" alt="close button." aria-hidden="true">close</span></a>
+        </nav>
+    </div>
+
+    <header id="site-header">
+        <div id="logo">
+            <img src="logo" alt="">
+        </div>
+        <nav>
+            <a href="http://">Home</a>
+            <a href="http://">New arrivals</a>
+            <a href="http://">Trending</a>
+            <a href="http://">All products</a>
+        </nav>
+        <div id="icon-menu">
+            <a href="http://"><span class="material-symbols-outlined" id="search-icon" onclick="removeClass()">search</span></a>
+            <a href="http://"><span class="material-symbols-outlined">person</span></a>
+            <a href="http://"><span class="material-symbols-outlined">shopping_basket</span></a>
+        </div>
+    </header>
+    
+    <div class="hidden blur-container" id="search-container">
+        <div id="search">
+            <span class="material-symbols-outlined">search</span>
+            <input type="text" id="search-bar" placeholder="Search...">
+            <span class="material-symbols-outlined" id="close-button" alt="close button." onclick="addClass()">close</span>
+        </div>
+    </div>  
 
     <section class="bread-crumbs"> <!-- Lad dem linke til steder på siden, så den highlighter/bliver mere synlig når man når til det punkt -->
         <div>
@@ -17,21 +66,21 @@
             <a href="#payment">Payment</a>
         </div>
     </section>
-    
+
     <section class="cart">
             <div class="cart-header">
                 <button id="cart_dropdown" class="dropdown" onclick="cart_dropdown()"> + </button>
-                <h2> Your order </h2> <!-- Dropdown som viser oversigt til kurven -->
+                <h3> Your order </h3> <!-- Dropdown som viser oversigt til kurven -->
             </div>
 
         <section id="order-info">
             <div class="order-info">
-                <p>1 item(s)</p> <p>$120</p>
-                <p>Delivery</p> <p>$120</p>
+                <p id="itemCount">1 item(s)</p> <p id="itemPrice">$120</p>
+                <p>Delivery</p> <p id="deliveryPrice">$120</p>
             </div>
             <div id="order-info" class="order-info">
-                <p style="font-weight: bold;"> Total </p> <p style="font-weight: bold;"> $120</p>
-                <p> incl. VAT & Taxes </p> <p> $120</p>
+                <p style="font-weight: bold;" > Total </p> <p id="totalPrice" style="font-weight: bold;"> $120</p>
+                <p> incl. VAT & Taxes </p> <p id="vatTaxesPrice"> $120</p>
             </div>
 
             <section id="cart-overview" class="cart-overview">
@@ -39,13 +88,11 @@
                     <img src="img/test_product.png" alt="">
                     <h3> Product name </h3>
                     <p> This is a description <br> about the product  </p>
-                    <button class="remove-item"> - </button> 1 <button class="add-item"> + </button>
-                </div>
-                <div class="cart-product">
-                    <img src="img/test_product.png" alt="">
-                    <h3> Product name </h3>
-                    <p> This is a description <br> about the product  </p>
-                    <button class="remove-item"> - </button> 1 <button class="add-item"> + </button>
+                    <div>
+                        <button class="remove-item" onclick="removeItem()"> - </button> 
+                        <span class="item-quantity"> 1 </span>
+                        <button class="add-item" onclick="addItem()"> + </button>
+                    </div>
                 </div>
             </section>
         </section>
@@ -54,31 +101,31 @@
     <section class="customer-info">
         <h3 id="customer-info"> Customer Info </h3>
         <form class="check-out-form">
-            <input id="email" type="email" placeholder="E-mail*"> <br>
-            <input id="phone-number" type="tel" placeholder="Phone number*"> <br>
-            <input id="fname" type="text" placeholder="First name*"> <br>
-            <input id="lname" type="text" placeholder="Last name*"> <br>
+            <input id="email" type="email" placeholder="E-mail*" required> <br>
+            <input id="phone-number" type="tel" placeholder="Phone number*" required> <br>
+            <input id="fname" type="text" placeholder="First name*" required> <br>
+            <input id="lname" type="text" placeholder="Last name*" required> <br>
         </form>
         <form class="check-out-form" id="address-info">
             <h3 id="delivery"> Billing address </h3>
-            <input id="address" type="text" placeholder="Address*"> <br>
-            <input class="small-input" id="zip-code" type="text" placeholder="Zip code*"> <br>
-            <input id="city" type="text" placeholder="City*"> <br>
+            <input id="address" type="text" placeholder="Address*" required> <br>
+            <input class="small-input" id="zip-code" type="text" placeholder="Zip code*" required> <br>
+            <input id="city" type="text" placeholder="City*" required> <br>
         </form>
     </section>
 
     <section class="delivery">
         <h3 id="delivery"> Delivery </h3>
-        <form class="deliver-preferences" id="deliver-preferences">
-            <input id="checkbox" type="checkbox"> Standard shipping*
-            <input id="checkbox" type="checkbox"> Pakkeboks* <br>
-            <input id="repeat-address" type="checkbox" onchange="same_address()"> Deliver to same address <br> <!-- JS? Så man ikke behøver at skrive adressen ind 2 gange -->
-        </form>
+            <form class="delivery-preferences" id="deliver-preferences">
+                <input id="checkbox" type="checkbox"> Standard shipping*
+                <input id="checkbox" type="checkbox"> Pakkeboks* <br>
+                <input id="repeat-address" type="checkbox" onchange="same_address()"> Deliver to same address <br> <!-- JS? Så man ikke behøver at skrive adressen ind 2 gange -->
+            </form>
         <form class="check-out-form" id="repeat-address-info">
             <h3 id="delivery"> Delivery address </h3>
-            <input id="address" type="text" placeholder="Address*"> <br>
-            <input id="zip-code" type="text" placeholder="Zip code*"> <br>
-            <input id="city" type="text" placeholder="City*"> <br>
+            <input id="address" type="text" placeholder="Address*" required> <br>
+            <input id="zip-code" type="text" placeholder="Zip code*" required> <br>
+            <input id="city" type="text" placeholder="City*" required> <br>
         </form>
     </section>
 
@@ -118,8 +165,15 @@
             </section>
         </section>
 
-    
+
         <section class="confirm-customer-info">
+            <p id="popup-confirm-Email"> Email</p>        
+            <p id="popup-confirm-Phone"> Phone</p>        
+            <p id="popup-confirm-Name"> Name</p>      
+        </section>
+        
+    
+        <!-- <section class="confirm-customer-info">
             <div>
                 <p style="font-weight: bold;"> Email</p>        
                 <p style="font-weight: bold;"> Phone</p>        
@@ -138,7 +192,7 @@
                 <p style="font-weight: bold;"> Shipping address </p>  
                 <p>Testway 12 <br> 1234 City <br> Denmark </p>
             </div>
-        </section>
+        </section> -->
 
         <section class="confirm-customer-info">
             <p style="font-weight: bold;"> Card </p>     <p>1234-5678-9123-4567 <br> 12 / 34  <br> 012 </p>
