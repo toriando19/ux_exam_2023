@@ -21,11 +21,12 @@
             <span class="material-symbols-outlined" alt="open button." aria-hidden="true">menu</span></a>
         <nav id="navbar">
             <a href="index.html">Home</a>
-            <a href="">New arrivals</a>
-            <a href="">Trending</a>
-            <a href="/">All products</a>
+            <a href="new-arrivals.html">New arrivals</a>
+            <a href="trending.html">Trending</a>
+            <a href="products.html">All products</a>
             <div id="icon-menu">
-                <a href="http://"><span class="material-symbols-outlined" id="search-icon" onclick="removeClass()">search</span></a>
+                <a href="http://"><span class="material-symbols-outlined" id="search-icon"
+                        onclick="removeClass()">search</span></a>
                 <a href="http://"><span class="material-symbols-outlined">person</span></a>
                 <a href="http://"><span class="material-symbols-outlined">shopping_basket</span></a>
             </div>
@@ -40,26 +41,32 @@
             <img src="logo" alt="">
         </div>
         <nav>
-            <a href="http://">Home</a>
-            <a href="http://">New arrivals</a>
-            <a href="http://">Trending</a>
-            <a href="/">All products</a>
+            <a href="index.html">Home</a>
+            <a href="new-arrivals.html">New arrivals</a>
+            <a href="trending.html">Trending</a>
+            <a href="products.html">All products</a>
         </nav>
         <div id="icon-menu">
-            <a href="http://"><span class="material-symbols-outlined" id="search-icon" onclick="removeClass()">search</span></a>
+            <a href="http://"><span class="material-symbols-outlined" id="search-icon"
+                    onclick="removeClass()">search</span></a>
             <a href="http://"><span class="material-symbols-outlined">person</span></a>
+        </div>
+
+        <div class="shopping">
+            <span class="quantity">0</span>
             <a href="http://"><span class="material-symbols-outlined">shopping_basket</span></a>
         </div>
     </header>
-    
+
     <div class="hidden blur-container" id="search-container">
         <div id="search">
             <span class="material-symbols-outlined">search</span>
             <input type="text" id="search-bar" placeholder="Search...">
-            <span class="material-symbols-outlined" id="close-button" alt="close button." onclick="addClass()">close</span>
+            <span class="material-symbols-outlined" id="close-button" alt="close button."
+                onclick="addClass()">close</span>
         </div>
     </div>
-   
+
     <section class="hero-image" loading="lazy">
         <div class="hero-text">
             <h1>All products</h1>
@@ -79,6 +86,14 @@
     </section>
 
     <main>
+        <div class="card " id="cart-container">
+            <h2>Cart</h2>
+            <ul class="listCard"></ul>
+            <div class="checkout-cart">
+                <div class="total">0</div>
+                <div class="closeShopping">Close</div>
+            </div>
+        </div>
         <div class="product-page">
             <section class="filter">
             </section>
@@ -91,24 +106,27 @@
 
     <footer>
         <div id="footer-mobile">
-            <button class="accordion">StyleHub <span class="material-symbols-outlined float" >keyboard_arrow_down</span></button>
+            <button class="accordion">StyleHub <span
+                    class="material-symbols-outlined float">keyboard_arrow_down</span></button>
             <div class="panel">
                 <p>Content for Section 1 goes here.</p>
             </div>
-    
-            <button class="accordion">Links <span class="material-symbols-outlined float" >keyboard_arrow_down</span></button>
+
+            <button class="accordion">Links <span
+                    class="material-symbols-outlined float">keyboard_arrow_down</span></button>
             <div class="panel">
-                <p>                
-                    <ul id="footer-links">
-                        <a href="http://">Kontakt os</a>
-                        <a href="http://">Returnering</a>
-                        <a href="http://">Handelsbetingelser</a>
-                        <a href="http://">Persondata- og cookiepolitik</a>
-                    </ul>
+                <p>
+                <ul id="footer-links">
+                    <a href="http://">Kontakt os</a>
+                    <a href="http://">Returnering</a>
+                    <a href="http://">Handelsbetingelser</a>
+                    <a href="http://">Persondata- og cookiepolitik</a>
+                </ul>
                 </p>
             </div>
-    
-            <button class="accordion">Nyhedsbrev <span class="material-symbols-outlined float" >keyboard_arrow_down</span></button>
+
+            <button class="accordion">Nyhedsbrev <span
+                    class="material-symbols-outlined float">keyboard_arrow_down</span></button>
             <div class="panel">
                 <p>Content for Section 3 goes here.</p>
             </div>
@@ -119,12 +137,13 @@
                 </div>
             </div>
         </div>
-        
+
         <div id="footer-desktop">
             <section id="footer-1">
                 <h4>StyleHub</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat dignissim velit sed varius. Sed
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat dignissim velit sed varius.
+                    Sed
                     pulvinar, justo in eleifend rhoncus, risus lorem condimentum sem, et iaculis libero nisl in elit.
                     Vivamus dignissim elit nibh, eget vehicula nibh tristique non.
                 </p>
