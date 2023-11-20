@@ -1,0 +1,38 @@
+.filter {
+    align-items: center;
+    text-align: center;
+    background-color: var(--colorBgMain);
+    border-right: solid;
+    border-color: var(--colorCTASecondary);
+}
+
+.filter h3 {
+    color: var(--colorSecondary);
+    font-weight: black;
+    background-color: var(--colorCTASecondary);
+    padding: 0.5rem;
+}
+
+.filter-area {
+    margin-top: 2rem;
+}
+
+.filter-area h4 {
+    color: var(--colorSecondary);
+}
+
+.filter-buttons {
+    border: none;
+    border-radius: 2.2rem;
+    background-color: var(--colorCTA);
+    color: var(--colorSecondary);
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 1rem;
+}
+
+.filter-buttons:hover {
+    background-color: var(--colorSecondary);
+    color: var(--colorCTA);
+}
