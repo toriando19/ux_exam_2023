@@ -37,3 +37,15 @@ function addClass() {
   const searchContainer = document.getElementById('search-container');
     searchContainer.classList.add('hidden'); // hidden
 }
+
+
+// SHOPPING CART //
+function showCart() {
+  const searchContainer = document.getElementById('cart-container');
+    searchContainer.classList.remove('hidden'); // visible
+}
+
+function hideCart() {
+  const searchContainer = document.getElementById('cart-container');
+    searchContainer.classList.add('hidden'); // hidden
+}

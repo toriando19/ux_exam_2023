@@ -80,6 +80,19 @@
     color: var(--colorLink);
     padding: 1rem;
 }
+ /* cart count */
+.quantity {
+    background-color: var(--colorCTA);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--colorSecondary);
+    position: absolute;
+    top: 2rem;
+    left: 90%;
+    padding: 3px 10px;
+}
 
 /* search bar */
 .hidden {
@@ -88,7 +101,7 @@
 
 #search {
     position: fixed;
-    top: 20rem;
+    top: 25rem;
     left: 0;    
     padding: 2rem;
     background-color: var(--colorSecondary);
@@ -278,6 +291,10 @@ footer {
         width: 7rem;
         height: 1.7rem;
     }
+    
+    #icon-menu {
+        margin-right: -5rem;
+    }
 
     #icon-menu a {
         padding: 0.2rem;
@@ -287,6 +304,7 @@ footer {
         color: var(--colorCTA);
     }
 
+    /* search bar */
     #search {
         top: 0rem;
         height: 100vh;
@@ -296,6 +314,14 @@ footer {
 
     #search-bar {
         width: 90vw;
+    }
+
+     /* cart count */
+    .quantity {
+        top: 1rem;
+        left: 95%;
+        padding: 1px 6px;
+        font-size: 0.6rem;
     }
 
 }
@@ -317,6 +343,17 @@ footer {
         background-image: url('../img/StyleHub-blue.svg');
         width: 12rem;
         height: 3rem;
+    }
+
+    #icon-menu {
+        margin-right: -18rem;
+    }
+
+     /* cart count */
+    .quantity {
+        top: 1.2rem;
+        left: 97%;
+        font-size: 0.8rem;
     }
 
     /* The hero image */
