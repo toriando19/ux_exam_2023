@@ -41,11 +41,11 @@ function addClass() {
 
 // SHOPPING CART //
 function showCart() {
-  const searchContainer = document.getElementById('cart-container');
-    searchContainer.classList.remove('hidden'); // visible
+  const shoppingContainer = document.getElementById('shopping-container');
+    shoppingContainer.classList.remove('hidden'); // visible
 }
 
 function hideCart() {
-  const searchContainer = document.getElementById('cart-container');
-    searchContainer.classList.add('hidden'); // hidden
+  const shoppingContainer = document.getElementById('shopping-container');
+    shoppingContainer.classList.add('hidden'); // hidden
 }
