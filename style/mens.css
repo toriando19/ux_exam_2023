@@ -4,7 +4,6 @@
     background-color: var(--colorBgMain);
     border-right: solid;
     border-color: var(--colorCTASecondary);
-    padding: ;
 }
 
 .filter h3 {
@@ -25,7 +24,7 @@
 .filter-buttons {
     border: none;
     border-radius: 2.2rem;
-    background-color: var(--colorCTA);
+    background-color: var(--colorCTASecondary);
     color: var(--colorSecondary);
     padding: 0.5rem;
     padding-left: 1rem;
@@ -60,9 +59,50 @@
     text-align: center;
 }
 
+input [type="number"]::-webkit-outer-spin-button,
+input [type="number"]::-webkit-inner-spin-button{
+    -moz-appearance: none;
+}
+
 .price-input .separator {
     width: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.slider {
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--colorCTASecondary);
+    position: relative;
+}
+
+.slider .progress {
+    height: 5px;
+    left: 10%;
+    right: 10%;
+    position: absolute;
+    border-radius: 5px;
+    background-color: rebeccapurple;
+}
+
+.range-input {
+    position: relative;
+}
+
+.range-input input{
+    position: absolute;
+    top: -20px;
+    height: 5px;
+    width: 20%;
+    -webkit-appearance: none;
+    background: none;
+}
+
+input [type="range"]::-webkit-slider-thumb {
+    height: 17px;
+    width: 17px;
+    background-color: aqua;
+}
+

@@ -49,3 +49,15 @@ fetch('https://fakestoreapi.com/products/category/men%27s%20clothing')
     .catch(error => {
         console.error('Error fetching data:', error);
     });
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+// Change color on button when "active" //////////////////////
+function changeColor() {
+  var button = document.getElementById("filter-button");
+
+  // Toggle between default and clicked classes
+  button.classList.toggle("default");
+  button.classList.toggle("clicked");
+}
