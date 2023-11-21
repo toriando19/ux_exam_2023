@@ -1,11 +1,15 @@
+const baseUrl = 'http://localhost:3000';
+
 let signupBtn = document.getElementById("signupBtn");
 let loginBtn = document.getElementById("loginBtn");
 let nameField = document.getElementById("nameField");
 let title = document.getElementById("title");
-let confirmPasswordField = document.getElementById("confirmPasswordField");
-let passwordField = document.querySelector('input[type="password"]');
 let emailField = document.querySelector('input[type="email"]');
 
+// Retrieve specific password input fields by their IDs
+let passwordField = document.getElementById('passwordField');
+let confirmPasswordField = document.getElementById('confirmPasswordField');
+console.log(confirmPasswordField);
 signupBtn.onclick = function () {
     nameField.style.maxHeight = "60px";
     confirmPasswordField.style.maxHeight = "60px";
@@ -14,12 +18,18 @@ signupBtn.onclick = function () {
     loginBtn.classList.add("disable");
 
     const password = passwordField.value;
-    const confirmPassword = confirmPasswordField.querySelector('input[type="password"]').value;
-    const email = emailField.value;
+    const confirmPassword = confirmPasswordField.value;
+    const isValidPassword = validatePassword(password); // Declaration and assignment of isValidPassword
 
-    if (password === confirmPassword && validatePassword(password)) {
+    console.log('Entered Password:', password);
+    console.log('Confirmed Password:', confirmPassword);
+    console.log('Is Password Valid?', isValidPassword);
+    console.log(confirmPasswordField);
+
+
+    if (password === confirmPassword && isValidPassword) {
         const user = {
-            email,
+            email: emailField.value,
             password
         };
 
@@ -82,3 +92,4 @@ function validatePassword(password) {
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
     return passwordRegex.test(password);
 }
+

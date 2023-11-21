@@ -35,6 +35,9 @@ fetch('https://fakestoreapi.com/products')
             const buyButton = document.createElement('button');
             buyButton.textContent = 'Buy now';
             buyButton.classList.add('buy-button');
+            // add to cart function
+            buyButton.addEventListener('click', () => addToCart(product)); 
+
 
             // Append image, title, price and button to the product card
             // appendChild is used to append (or add) an HTML element as a child to another element in the DOM

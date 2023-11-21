@@ -74,7 +74,7 @@
     background-image: url('../img/StyleHub.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;}
+    background-size: contain;}
 
 #icon-menu a {
     color: var(--colorLink);
@@ -288,7 +288,7 @@ footer {
 
     #logo {
         background-image: url('../img/StyleHub-blue.svg');
-        width: 7rem;
+        width: 5rem;
         height: 1.7rem;
     }
     
