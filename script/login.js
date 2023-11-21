@@ -1,13 +1,15 @@
 const baseUrl = 'http://localhost:3000';
-const signupBtn = document.getElementById("signupBtn");
-const loginBtn = document.getElementById("loginBtn");
-const nameField = document.getElementById("nameField");
-const title = document.getElementById("title");
-const confirmPasswordField = document.getElementById("confirmPasswordField");
-const passwordField = document.querySelector('input[type="password"]');
-const emailField = document.querySelector('input[type="email"]');
-const logoutBtn = document.getElementById('logoutBtn');
 
+let signupBtn = document.getElementById("signupBtn");
+let loginBtn = document.getElementById("loginBtn");
+let nameField = document.getElementById("nameField");
+let title = document.getElementById("title");
+let emailField = document.querySelector('input[type="email"]');
+
+// Retrieve specific password input fields by their IDs
+let passwordField = document.getElementById('passwordField');
+let confirmPasswordField = document.getElementById('confirmPasswordField');
+console.log(confirmPasswordField);
 signupBtn.onclick = function () {
     nameField.style.maxHeight = "60px";
     confirmPasswordField.style.maxHeight = "60px";
@@ -17,16 +19,22 @@ signupBtn.onclick = function () {
 
     const password = passwordField.value;
     const confirmPassword = confirmPasswordField.value;
-    const email = emailField.value;
+    const isValidPassword = validatePassword(password); // Declaration and assignment of isValidPassword
 
-    if (password === confirmPassword && validatePassword(password)) {
+    console.log('Entered Password:', password);
+    console.log('Confirmed Password:', confirmPassword);
+    console.log('Is Password Valid?', isValidPassword);
+    console.log(confirmPasswordField);
+
+
+    if (password === confirmPassword && isValidPassword) {
         const user = {
-            email,
+            email: emailField.value,
             password
         };
 
         // Send user data to JSON Server
-        fetch(`${baseUrl}/users`, {
+        fetch('http://localhost:3000/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -48,11 +56,12 @@ signupBtn.onclick = function () {
 };
 
 loginBtn.onclick = function () {
+    // Add login functionality here, check if the entered credentials match any user in the JSON file
     const enteredEmail = emailField.value;
     const enteredPassword = passwordField.value;
 
     // Retrieve user data from JSON Server
-    fetch(`${baseUrl}/users?email=${enteredEmail}&password=${enteredPassword}`)
+    fetch(`http://localhost:3000/users?email=${enteredEmail}&password=${enteredPassword}`)
         .then(response => response.json())
         .then(data => {
             if (data.length > 0) {
@@ -69,15 +78,18 @@ loginBtn.onclick = function () {
         });
 };
 
+// Logout functionality
+// Assuming you have a logout button with ID "logoutBtn"
+const logoutBtn = document.getElementById('logoutBtn');
 logoutBtn.onclick = function () {
     sessionStorage.removeItem('loggedInUser');
     alert('Logged out successfully!');
     // Perform further actions if needed
 };
 
-//function validatePassword(password) {
+function validatePassword(password) {
     // Password validation criteria
-    //const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
-    //return passwordRegex.test(password);
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
+    return passwordRegex.test(password);
 }
 
