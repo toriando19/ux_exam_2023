@@ -3,12 +3,14 @@
 /* ----- MOBILE ----- */
 
 .product-page {
-    display: block;
+    display: inline-block;
+    position: relative;
     width: 100vw;
     color: var(--colorSecondary);
 }
 
 .products {
+    margin-top: 2rem;
     width: 100vw;
     padding: 2rem;
     display: flex;

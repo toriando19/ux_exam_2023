@@ -8,10 +8,11 @@
     z-index: 1000;
 }
 
-#shopping {
+#cart {
     height: 100vh;
     background-color: var(--colorBgSecondary);
     width: 100vw;
+    margin: 0;
     position: absolute;
     top: 0;
     right: 0;
@@ -20,12 +21,12 @@
     color: var(--colorSecondary);
 }
 
-#shopping .close-button {
+#cart .close-button {
     color: var(--colorSecondary);
     cursor: pointer;
 }
 
-#shopping button {
+#cart button {
     border: none;
     border-radius: 2.2rem;
     background-color: var(--colorCTA);
@@ -35,7 +36,7 @@
     margin-top: 1rem;
 }
 
-#shopping button a {
+#cart button a {
     text-decoration: none;
     color: var(--colorLink);
 }
@@ -54,6 +55,19 @@
     object-fit: contain;
 }
 
+/* cart count */
+#quantity {
+    background-color: var(--colorCTA);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--colorSecondary);
+    position: absolute;
+    top: 2rem;
+    left: 90%;
+    padding: 3px 10px;
+}
 
 
 
@@ -67,13 +81,14 @@
         height: 100vh;
         position: fixed;
         top: 0;
+        right: 0;
         overflow: hidden;
         z-index: 1000;
         background-color: transparent;
         backdrop-filter: blur(5px);
     }
 
-    #shopping {
+    #cart {
         height: 100vh;
         background-color: var(--colorBgSecondary);
         width: 35vw;
@@ -85,11 +100,11 @@
         color: var(--colorSecondary);
     }
 
-    #shopping .close-button {
+    #cart .close-button {
         color: var(--colorSecondary);
     }
 
-    #shopping button {
+    #cart button {
         border: none;
         border-radius: 2.2rem;
         background-color: var(--colorCTA);
@@ -99,19 +114,32 @@
         margin-top: 1rem;
     }
 
-    #shopping button a {
+    #cart button a {
         text-decoration: none;
         color: var(--colorLink);
     }
 
+    /* cart count */
+    #quantity {
+        top: 1rem;
+        left: 95%;
+        padding: 1px 6px;
+        font-size: 0.6rem;
+    }
 }
 
 /* ----- DESKTOP ----- */
 
 @media only screen and (min-width: 768px) {
-    #shopping {
+    #cart {
         width: 35vw;
     }
-    
+
+    /* cart count */
+    #quantity {
+        top: 1.2rem;
+        left: 97%;
+        font-size: 0.8rem;
+    }
 
 }

@@ -1,50 +1,22 @@
+// Fetch data from Fake Store API
 fetch('https://fakestoreapi.com/products/category/women%27s%20clothing')
-  .then(response => response.json())
-  .then(mensClothing => {
-    console.log(mensClothing); // Process the retrieved men's clothing products here
-  })
-  .catch(error => {
-    console.error('Error fetching men\'s clothing:', error);
-  });
+.then(response => response.json())
+.then(data => displayProducts(data));
 
-fetch('https://fakestoreapi.com/products/category/women%27s%20clothing')
-    .then(response => response.json())
-    .then(products => {
-        const productList = document.getElementById('product-list');
+function displayProducts(products) {
+const productsContainer = document.getElementById('product-list');
 
-        // Create product cards dynamically based on the fetched data
-        products.forEach(product => {
-            const productCard = document.createElement('div');
-            productCard.classList.add('product'); // adds class 'product'
+products.forEach(product => {
+  const productCard = document.createElement('div');
+  productCard.classList.add('product');
 
-            const image = document.createElement('img'); // product picture
-            image.src = product.image;
-            image.alt = product.title;
+  productCard.innerHTML = `
+    <img src="${product.image}" alt="${product.title}">
+    <h3 class="product-title">${product.title}</h3>
+    <p class="price">$${product.price}</p>
+    <button class="buy-button" onclick="addToCart(${product.id})">Add to Cart</button>
+  `;
 
-            const title = document.createElement('h4'); // product title
-            title.textContent = product.title;
-            title.classList.add('product-title'); // adds class 'product-title'
-
-            const price = document.createElement('p'); // product price
-            price.textContent = `$${product.price}`;
-            price.classList.add('price'); // adds class 'price'
-
-            // Creating a 'buy' button
-            const buyButton = document.createElement('button');
-            buyButton.textContent = 'Buy now';
-            buyButton.classList.add('buy-button');
-
-            // Append image, title, price and button to the product card
-            // appendChild is used to append (or add) an HTML element as a child to another element in the DOM
-            productCard.appendChild(image);
-            productCard.appendChild(title);
-            productCard.appendChild(price);
-            productCard.appendChild(buyButton);
-
-            // Append the product card to the product list container
-            productList.appendChild(productCard);
-        });
-    })
-    .catch(error => {
-        console.error('Error fetching data:', error);
-    });
+  productsContainer.appendChild(productCard);
+});
+}

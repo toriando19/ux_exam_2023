@@ -1,3 +1,28 @@
+.product-bread-crumbs {
+    color: var(--basicColorSecondary);
+    margin-left: 2rem;
+    margin-top: 1rem;
+    float: top;
+    position: absolute;
+    padding-left: 20%;
+    font-size: 13px;
+}
+
+.bread-crumbs-link {
+    color: var(--basicColorSecondary);
+    text-decoration: none;
+}
+
+.bread-crumbs-link:hover {
+    color: var(--colorSecondary);
+}
+
+.bread-crumbs-link-active{
+    color: var(--colorSecondary);
+    text-decoration: none;
+}
+
+
 .filter {
     align-items: center;
     text-align: center;
@@ -84,7 +109,7 @@ input [type="number"]::-webkit-inner-spin-button{
     right: 10%;
     position: absolute;
     border-radius: 5px;
-    background-color: rebeccapurple;
+    background-color: var(--colorCTA);
 }
 
 .range-input {

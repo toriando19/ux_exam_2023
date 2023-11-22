@@ -50,8 +50,59 @@ function hideCart() {
   shoppingContainer.classList.add('hidden'); // hidden
 }
 
-// Add to cart
-
-function addToCart() {
-  console.log('Added to cart');
+// Check if localStorage is working
+if(typeof(Storage) !== 'undefined'){
+  console.log('storage is working')
+}else{
+  console.log('storage is not working on your browser');
 }
+
+// Add to cart
+function addToCart(productId) {
+  const products = JSON.parse(localStorage.getItem('cart')) || [];
+  console.log('Added to cart');
+
+  // Check if the product is already in the cart
+  const existingProduct = products.find(item => item.id === productId);
+
+  if (existingProduct) {
+    existingProduct.quantity++;
+  } else {
+    const productToAdd = { id: productId, quantity: 1 };
+    products.push(productToAdd);
+  }
+
+  localStorage.setItem('cart', JSON.stringify(products));
+  displayCart();
+}
+
+function displayCart() {
+  const cartItemsContainer = document.getElementById('cartItems');
+  cartItemsContainer.innerHTML = '';
+
+  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+  cartItems.forEach(item => {
+    // Fetch product details from Fake Store API based on item id
+    fetch(`https://fakestoreapi.com/products/${item.id}`)
+      .then(response => response.json())
+      .then(product => {
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+
+        cartItem.innerHTML = `
+          <img src="${product.image}" alt="${product.title}">
+          <div>
+            <h4>${product.title}</h4>
+            <p>$${product.price}</p>
+            <p>Quantity: ${item.quantity}</p>
+          </div>
+        `;
+
+        cartItemsContainer.appendChild(cartItem);
+      });
+  });
+}
+
+// Display cart on page load
+displayCart();
