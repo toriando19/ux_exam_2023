@@ -52,8 +52,6 @@ fetch('https://fakestoreapi.com/products/category/men%27s%20clothing')
 
 
 /////////////////////////////////////////////////////////////////////////////
-<<<<<<< Updated upstream
-=======
 
 // Change color on button when "active" //////////////////////
 function changeColor() {
@@ -63,5 +61,3 @@ function changeColor() {
   button.classList.toggle("default");
   button.classList.toggle("clicked");
 }
-
->>>>>>> Stashed changes
