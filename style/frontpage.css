@@ -2,6 +2,21 @@
 
 /* ----- MOBILE ----- */
 
+.hero-button {
+    border: none;
+    border-radius: 2.2rem;
+    background-color: var(--colorCTA);
+    color: var(--colorSecondary);
+    font-size: 16px;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 1rem;
+}
+.hero-button:hover {
+    background-color: var(--colorSecondary);
+    color: var(--colorCTA);
+}
 
 
 /* ----- TABLET ----- */
