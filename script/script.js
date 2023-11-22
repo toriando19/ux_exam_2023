@@ -54,4 +54,6 @@ function hideCart() {
 
 function addToCart() {
   console.log('Added to cart');
+  const count = document.getElementById('quantity');
+  quantity +1
 }
