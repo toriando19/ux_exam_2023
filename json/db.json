@@ -1,16 +1,52 @@
-
 {
-    "users": [
-      {
-        "id": 1,
-        "email": "user1@example.com",
-        "password": "password1"
-      },
-      {
-        "id": 2,
-        "email": "user2@example.com",
-        "password": "password2"
-      }
-     
-    ]
-  }
+  "users": [
+    {
+      "id": 1,
+      "email": "user1@example.com",
+      "password": "password1",
+      "name": "User One"
+    },
+    {
+      "id": 2,
+      "email": "user2@example.com",
+      "password": "password2",
+      "name": "User Two"
+    },
+    {
+      "id": 3,
+      "email": "user3@example.com",
+      "password": "password3",
+      "name": "User Three"
+    },
+    {
+      "email": "josefinemaria@yahoo.dk",
+      "password": "Password123@",
+      "id": 4
+    },
+    {
+      "email": "josefinemaria@yahoo.dk",
+      "password": "Password123@",
+      "id": 5
+    },
+    {
+      "email": "josefinemaria@yahoo.dk",
+      "password": "Password123@",
+      "id": 6
+    },
+    {
+      "email": "josefinemaria@yahoo.dk",
+      "password": "Password123@",
+      "id": 7
+    },
+    {
+      "email": "josefinemaria@yahoo.dk",
+      "password": "Password123@",
+      "id": 8
+    },
+    {
+      "email": "josefinemaria@yahoo.dk",
+      "password": "Password123@",
+      "id": 9
+    }
+  ]
+}
