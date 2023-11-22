@@ -80,19 +80,6 @@
     color: var(--colorLink);
     padding: 1rem;
 }
- /* cart count */
-.quantity {
-    background-color: var(--colorCTA);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--colorSecondary);
-    position: absolute;
-    top: 2rem;
-    left: 90%;
-    padding: 3px 10px;
-}
 
 /* search bar */
 .hidden {
@@ -316,14 +303,6 @@ footer {
         width: 90vw;
     }
 
-     /* cart count */
-    .quantity {
-        top: 1rem;
-        left: 95%;
-        padding: 1px 6px;
-        font-size: 0.6rem;
-    }
-
 }
 
 
@@ -347,13 +326,6 @@ footer {
 
     #icon-menu {
         margin-right: -18rem;
-    }
-
-     /* cart count */
-    .quantity {
-        top: 1.2rem;
-        left: 97%;
-        font-size: 0.8rem;
     }
 
     /* The hero image */

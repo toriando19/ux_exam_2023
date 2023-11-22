@@ -30,55 +30,30 @@ for (let i = 0; i < acc.length; i++) {
 // Search bar visibility
 function removeClass() {
   const searchContainer = document.getElementById('search-container');
-    searchContainer.classList.remove('hidden'); // visible
+  searchContainer.classList.remove('hidden'); // visible
 }
 
 function addClass() {
   const searchContainer = document.getElementById('search-container');
-    searchContainer.classList.add('hidden'); // hidden
+  searchContainer.classList.add('hidden'); // hidden
 }
 
 
 // SHOPPING CART //
 function showCart() {
   const shoppingContainer = document.getElementById('shopping-container');
-    shoppingContainer.classList.remove('hidden'); // visible
+  shoppingContainer.classList.remove('hidden'); // visible
 }
 
 function hideCart() {
   const shoppingContainer = document.getElementById('shopping-container');
-    shoppingContainer.classList.add('hidden'); // hidden
+  shoppingContainer.classList.add('hidden'); // hidden
 }
 
-// Function to handle adding a product to the cart
-function addToCart(product) {
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+// Add to cart
 
-  const existingProduct = cart.find(item => item.id === product.id);
-
-  if (existingProduct) {
-      existingProduct.quantity++;
-  } else {
-      cart.push({ id: product.id, title: product.title, price: product.price, quantity: 1 });
-  }
-
-  localStorage.setItem('cart', JSON.stringify(cart));
-  updateCartDisplay();
+function addToCart() {
+  console.log('Added to cart');
+  const count = document.getElementById('quantity');
+  quantity +1
 }
-
-// Function to update the cart display
-function updateCartDisplay() {
-  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-  const cartList = document.getElementById('cart-items');
-
-  cartList.innerHTML = ''; // Clear the cart display
-
-  cartItems.forEach(item => {
-      const listItem = document.createElement('li');
-      listItem.textContent = `Product: ${item.title}, Quantity: ${item.quantity}`;
-      cartList.appendChild(listItem);
-  });
-}
-
-// Initial update of cart display
-updateCartDisplay();

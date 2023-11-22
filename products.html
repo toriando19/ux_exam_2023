@@ -25,9 +25,11 @@
             <a href="trending.html">Trending</a>
             <a href="products.html">All products</a>
             <div id="icon-menu">
-                <a href="http://"><span class="material-symbols-outlined" id="search-icon" onclick="removeClass()">search</span></a>
-                <a href="http://"><span class="material-symbols-outlined">person</span></a>
-                <a href="http://"><span class="material-symbols-outlined" id="shopping-icon" onclick="showCart()">shopping_basket</span></a>
+                <a href="http://"><span class="material-symbols-outlined" id="search-icon"
+                        onclick="removeClass()">search</span></a>
+                <a href="http://"><span class="material-symbols-outlined">logout</span></a>
+                <a href="http://"><span class="material-symbols-outlined" id="shopping-icon"
+                        onclick="showCart()">shopping_basket</span></a>
             </div>
             <a class="close" href="#" aria-label="Close main menu">
                 <span class="sr-only">Close main menu</span>
@@ -48,19 +50,19 @@
         <div id="icon-menu">
             <a href="http://"><span class="material-symbols-outlined" id="search-icon"
                     onclick="removeClass()">search</span></a>
-            <a href="http://"><span class="material-symbols-outlined">person</span></a>
+            <a href="http://"><span class="material-symbols-outlined">logout</span></a>
         </div>
 
         <div class="shopping">
-            <span class="quantity">0</span>
-            <a href="http://"><span class="material-symbols-outlined" id="shopping-icon" onclick="showCart()">shopping_basket</span></a>
+            <span id="quantity">0</span>
+            <a href="http://"><span class="material-symbols-outlined" id="shopping-icon"
+                    onclick="showCart()">shopping_basket</span></a>
         </div>
     </header>
-    
+
     <div class="hidden" id="shopping-container">
         <div id="shopping">
-            <span class="material-symbols-outlined" class="close-button" alt="close button."
-                onclick="hideCart()">close</span>
+            <span class="material-symbols-outlined close-button" alt="close button." onclick="hideCart()">close</span>
             <h2>Cart</h2>
             <ul id="cart-items"></ul>
             <button><a href="check-out.html">Go to checkout</a></button>

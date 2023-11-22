@@ -22,6 +22,7 @@
 
 #shopping .close-button {
     color: var(--colorSecondary);
+    cursor: pointer;
 }
 
 #shopping button {
@@ -37,6 +38,34 @@
 #shopping button a {
     text-decoration: none;
     color: var(--colorLink);
+}
+
+#cart-items {
+    list-style: none;
+}
+
+.cart-item-details {
+    font-size: 0.8rem;
+}
+
+.cart-item-image {
+    max-height: 5rem;
+    width: 5rem;
+    object-fit: contain;
+}
+
+/* cart count */
+#quantity {
+    background-color: var(--colorCTA);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--colorSecondary);
+    position: absolute;
+    top: 2rem;
+    left: 90%;
+    padding: 3px 10px;
 }
 
 
@@ -88,14 +117,27 @@
         color: var(--colorLink);
     }
 
+    /* cart count */
+    #quantity {
+        top: 1rem;
+        left: 95%;
+        padding: 1px 6px;
+        font-size: 0.6rem;
+    }
 }
 
 /* ----- DESKTOP ----- */
 
 @media only screen and (min-width: 768px) {
     #shopping {
-        width: 25vw;
+        width: 35vw;
     }
-    
+
+    /* cart count */
+    #quantity {
+        top: 1.2rem;
+        left: 97%;
+        font-size: 0.8rem;
+    }
 
 }
