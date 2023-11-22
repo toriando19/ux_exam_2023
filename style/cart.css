@@ -8,10 +8,11 @@
     z-index: 1000;
 }
 
-#shopping {
+#cart {
     height: 100vh;
     background-color: var(--colorBgSecondary);
     width: 100vw;
+    margin: 0;
     position: absolute;
     top: 0;
     right: 0;
@@ -20,12 +21,12 @@
     color: var(--colorSecondary);
 }
 
-#shopping .close-button {
+#cart .close-button {
     color: var(--colorSecondary);
     cursor: pointer;
 }
 
-#shopping button {
+#cart button {
     border: none;
     border-radius: 2.2rem;
     background-color: var(--colorCTA);
@@ -35,7 +36,7 @@
     margin-top: 1rem;
 }
 
-#shopping button a {
+#cart button a {
     text-decoration: none;
     color: var(--colorLink);
 }
@@ -80,13 +81,14 @@
         height: 100vh;
         position: fixed;
         top: 0;
+        right: 0;
         overflow: hidden;
         z-index: 1000;
         background-color: transparent;
         backdrop-filter: blur(5px);
     }
 
-    #shopping {
+    #cart {
         height: 100vh;
         background-color: var(--colorBgSecondary);
         width: 35vw;
@@ -98,11 +100,11 @@
         color: var(--colorSecondary);
     }
 
-    #shopping .close-button {
+    #cart .close-button {
         color: var(--colorSecondary);
     }
 
-    #shopping button {
+    #cart button {
         border: none;
         border-radius: 2.2rem;
         background-color: var(--colorCTA);
@@ -112,7 +114,7 @@
         margin-top: 1rem;
     }
 
-    #shopping button a {
+    #cart button a {
         text-decoration: none;
         color: var(--colorLink);
     }
@@ -129,7 +131,7 @@
 /* ----- DESKTOP ----- */
 
 @media only screen and (min-width: 768px) {
-    #shopping {
+    #cart {
         width: 35vw;
     }
 

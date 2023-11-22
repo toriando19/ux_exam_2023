@@ -53,18 +53,20 @@
             <a href="http://"><span class="material-symbols-outlined">logout</span></a>
         </div>
 
-        <div class="shopping">
-            <span id="quantity">0</span>
+        <div class="icon-shopping">
+            <p id="quantity">0</p>
             <a href="http://"><span class="material-symbols-outlined" id="shopping-icon"
                     onclick="showCart()">shopping_basket</span></a>
         </div>
     </header>
 
     <div class="hidden" id="shopping-container">
-        <div id="shopping">
+        <div class="cart" id="cart">
             <span class="material-symbols-outlined close-button" alt="close button." onclick="hideCart()">close</span>
             <h2>Cart</h2>
-            <ul id="cart-items"></ul>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items goes here -->
+            </div>
             <button><a href="check-out.html">Go to checkout</a></button>
         </div>
     </div>
