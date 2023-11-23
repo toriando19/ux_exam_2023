@@ -61,6 +61,7 @@ if(typeof(Storage) !== 'undefined'){
 function addToCart(productId) {
   const products = JSON.parse(localStorage.getItem('cart')) || [];
   console.log('Added to cart');
+  alert('Product is added to cart')
 
   // Check if the product is already in the cart
   const existingProduct = products.find(item => item.id === productId);
@@ -88,14 +89,14 @@ function displayCart() {
       .then(response => response.json())
       .then(product => {
         const cartItem = document.createElement('div');
-        cartItem.classList.add('cart-item');
+        cartItem.classList.add('cart-popup');
 
         cartItem.innerHTML = `
-          <img src="${product.image}" alt="${product.title}">
-          <div>
-            <h4>${product.title}</h4>
-            <p>$${product.price}</p>
-            <p>Quantity: ${item.quantity}</p>
+          <div class="cart-product">
+            <img src="${product.image}" alt="${product.title}" class="cart-img">
+            <h4 class="cart-title">${product.title}</h4>
+            <p>$${product.price} <br> Quantity: ${item.quantity}</p>
+            <span class="material-symbols-outlined delete">delete</span>          
           </div>
         `;
 

@@ -41,19 +41,31 @@
     color: var(--colorLink);
 }
 
-#cart-items {
-    list-style: none;
+#cart button:hover {
+    background-color: var(--colorSecondary);
 }
 
-.cart-item-details {
-    font-size: 0.8rem;
+#cart button a:hover {
+    color: var(--colorCTA);
 }
 
-.cart-item-image {
-    max-height: 5rem;
-    width: 5rem;
-    object-fit: contain;
+.cart-product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.cart-img {
+    width: 25%;
+}
+
+.cart-title {
+    max-width: 25%;
+    font-size: 0.9rem;
+}
+
+
 
 /* cart count */
 #quantity {
