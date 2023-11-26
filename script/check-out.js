@@ -24,7 +24,7 @@ document.getElementById('form').addEventListener('input', function () {
 // Cart dropdown /////////////////////////////////////////////////////////////////////////////////////
 
 function cart_dropdown() {
-    var section = document.getElementById('order-info');   // Creating the variable of the section, that is linked to the "repeat-address-info"-section in the "check-out.html"
+    var section = document.getElementById('check-out-order-info');   // Creating the variable of the section, that is linked to the "repeat-address-info"-section in the "check-out.html"
 
      // Toggle the visibility of the section
      if (section.style.display === 'none' ) {
@@ -140,6 +140,20 @@ function closePopup() {
         section.style.display = 'grid';
     }
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Confirm payment - clear localstorage - return to frontpage ///////////////////////////////////////////////////////////////////////
+
+function clearLocalStorage() {
+    localStorage.clear();
+    alert("Thank you for your order! We will send you an email with the confirmation!");
+
+    window.location.href = "index.html"; // Return to frontpage after confirm purchase //
+}
+
+// Attach the function to the button click event
+document.getElementById("clearLocalStorageBtn").addEventListener("click", clearLocalStorage);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
