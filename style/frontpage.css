@@ -18,9 +18,79 @@
     color: var(--colorCTA);
 }
 
+.product-frontpage-overview {
+    margin: 0 auto;
+}
+
+.product-frontpage-overview h2{
+    margin-top: 4rem;
+    margin-bottom: -3rem;
+    text-align: center;
+    font-size: 30px;
+    color: var(--colorSecondary);
+}
+
+.hero-secondary-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--colorLink);
+    width: 100%;
+}
+
+.hero-secondary-text h1 {
+    font-size: 2rem;
+    color: var(--basicColor);
+}
+
+.hero-secondary-text p {
+    padding: 1rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--basicColorSecondary);
+}
+
+.hero-secondary-image {
+    background-image: url('../img/black-friday.jpeg'); /* Photo by <a href= "https://www.istockphoto.com/search/2/image-film?phrase=gold+and+black+balloons" > iStock Photo </a> */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    position: relative;
+}
+
+
+
+.bottom-page-banner {
+    margin-top: 3rem;
+    margin-bottom: -4rem;
+    padding: 1.5rem;
+    background-color: var(--colorCTASecondary);
+    text-align: center;
+}
+
+.bottom-page-banner h3 {
+    color: var(--colorSecondary);
+    margin: 10px;
+}
+
+.bottom-page-banner p{
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+
 
 /* ----- TABLET ----- */
 
+@media screen and (min-width: 480px) {
+    
+  
+
+
+}
 
 
 /* ----- DESKTOP ----- */

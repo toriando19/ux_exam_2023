@@ -51,30 +51,50 @@ function hideCart() {
 }
 
 // Check if localStorage is working
-if(typeof(Storage) !== 'undefined'){
-  console.log('storage is working')
-}else{
-  console.log('storage is not working on your browser');
+if (typeof (Storage) !== 'undefined') {
+  console.log('Storage is working')
+} else {
+  console.log('Storage is not working on your browser');
 }
 
 // Add to cart
+function updateTotalQuantityDisplay() {
+  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  const totalQuantity = cartItems.reduce((total, item) => total + (item.quantity || 0), 0);
+  const quantityDisplay = document.getElementById('quantity');
+  quantityDisplay.textContent = totalQuantity;
+
+  // Store total quantity in localStorage
+  localStorage.setItem('totalQuantity', totalQuantity);
+}
+
 function addToCart(productId) {
-  const products = JSON.parse(localStorage.getItem('cart')) || [];
+  let products = JSON.parse(localStorage.getItem('cart')) || [];
+  alert('Product is added to cart');
   console.log('Added to cart');
 
-  // Check if the product is already in the cart
   const existingProduct = products.find(item => item.id === productId);
 
   if (existingProduct) {
-    existingProduct.quantity++;
+    existingProduct.quantity++;   // If existing product, add 1 to quantity in cart
   } else {
-    const productToAdd = { id: productId, quantity: 1 };
+    const productToAdd = { id: productId, quantity: 1 }; // Else add product to cart
     products.push(productToAdd);
   }
 
   localStorage.setItem('cart', JSON.stringify(products));
+
+  // Update total quantity display and store in localStorage
+  updateTotalQuantityDisplay();
+
   displayCart();
 }
+
+// Update total quantity on page load
+document.addEventListener('DOMContentLoaded', function() {
+  updateTotalQuantityDisplay();
+});
+
 
 function displayCart() {
   const cartItemsContainer = document.getElementById('cartItems');
@@ -88,20 +108,25 @@ function displayCart() {
       .then(response => response.json())
       .then(product => {
         const cartItem = document.createElement('div');
-        cartItem.classList.add('cart-item');
+        cartItem.classList.add('cart-popup');
 
         cartItem.innerHTML = `
-          <img src="${product.image}" alt="${product.title}">
-          <div>
-            <h4>${product.title}</h4>
-            <p>$${product.price}</p>
-            <p>Quantity: ${item.quantity}</p>
+          <div class="cart-product-popup">
+            <img src="${product.image}" alt="${product.title}" class="cart-img-popup">
+            <h4 class="cart-title-popup">${product.title}</h4>
+            <p>$${product.price} <br> Quantity: ${item.quantity}</p>
+            <button onclick="removeFromCart(${product.id})" id="remove-from-cart">🗑️</button>      
           </div>
         `;
 
         cartItemsContainer.appendChild(cartItem);
       });
   });
+}
+
+function removeFromCart(productId) {
+  const products = JSON.parse(localStorage.getItem('cart')) || [];
+  console.log('Removed from cart');
 }
 
 // Display cart on page load

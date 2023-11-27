@@ -79,17 +79,16 @@
     }
 
     .products {
-        width: 65vw;
-        padding: 0rem;
+        padding: 1rem;
+        margin-left: 2rem;
     }
 
     .product {
-        width: 20vw;
+        width: 18vw;
         margin: 2rem 0.5rem;
     }
 
     .product img {
-        width: 20vw;
         height: 35vh;
         padding: 0.5rem;
     }

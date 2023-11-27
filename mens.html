@@ -25,9 +25,11 @@
             <a href="trending.html">Trending</a>
             <a href="products.html">All products</a>
             <div id="icon-menu">
-                <a href="http://"><span class="material-symbols-outlined" id="search-icon" onclick="removeClass()">search</span></a>
-                <a href="http://"><span class="material-symbols-outlined">person</span></a>
-                <a href="http://"><span class="material-symbols-outlined">shopping_basket</span></a>
+                <a href="http://"><span class="material-symbols-outlined" id="search-icon"
+                        onclick="removeClass()">search</span></a>
+                <a href="http://"><span class="material-symbols-outlined">logout</span></a>
+                <a href="http://"><span class="material-symbols-outlined" id="shopping-icon"
+                        onclick="showCart()">shopping_basket</span></a>
             </div>
             <a class="close" href="#" aria-label="Close main menu">
                 <span class="sr-only">Close main menu</span>
@@ -46,17 +48,36 @@
             <a href="products.html">All products</a>
         </nav>
         <div id="icon-menu">
-            <a href="http://"><span class="material-symbols-outlined" id="search-icon" onclick="removeClass()">search</span></a>
-            <a href="http://"><span class="material-symbols-outlined">person</span></a>
-            <a href="http://"><span class="material-symbols-outlined">shopping_basket</span></a>
+            <a href="http://"><span class="material-symbols-outlined" id="search-icon"
+                    onclick="removeClass()">search</span></a>
+            <a href="http://"><span class="material-symbols-outlined">logout</span></a>
+        </div>
+
+        <div class="icon-shopping">
+            <p id="quantity">0</p>
+            <a href="http://"><span class="material-symbols-outlined" id="shopping-icon"
+                    onclick="showCart()">shopping_basket</span></a>
         </div>
     </header>
-    
+
+    <div class="hidden" id="shopping-container">
+        <div class="cart" id="cart">
+            <span class="material-symbols-outlined close-button" alt="close button." onclick="hideCart()">close</span>
+            <h2>Cart</h2>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items goes here -->
+            </div>
+            <button id="cart-checkout-btn"><a href="check-out.html">Go to checkout</a></button>
+        </div>
+    </div>
+
+
     <div class="hidden blur-container" id="search-container">
         <div id="search">
             <span class="material-symbols-outlined">search</span>
             <input type="text" id="search-bar" placeholder="Search...">
-            <span class="material-symbols-outlined" id="close-button" alt="close button." onclick="addClass()">close</span>
+            <span class="material-symbols-outlined" class="close-button" alt="close button."
+                onclick="addClass()">close</span>
         </div>
     </div>
    
@@ -86,62 +107,63 @@
                 <div>
                     <h3> Filter </h3>
                 </div>
-                <div class="filter-area">
-                    <h4> Sort by </h4>
-                    <div>
-                        <button class="filter-buttons"> Newest </button>
-                        <button class="filter-buttons"> Sale </button>
-                        <button class="filter-buttons"> Trending </button>
-                        <button class="filter-buttons"> Lowest price </button>
-                        <button class="filter-buttons"> Highest price </button>
-                    </div>
-                </div>
-                <div class="filter-area">
-                    <h4> Brand </h4>
-                    <div>
-                        <button class="filter-buttons"> Fjallraven </button>
-                        <button class="filter-buttons"> MENS </button>
-                    </div>
-                </div>
-                <div class="filter-area">
-                    <h4> Colors </h4>
-                    <div>
-                        <button class="filter-buttons"> Blue </button>
-                        <button class="filter-buttons"> White </button>
-                        <button class="filter-buttons"> Beige </button>
-                    </div>
-                </div>
-                <div class="filter-area">
-                    <h4> Size </h4>
-                    <div>
-                        <button class="filter-buttons"> OneSize </button>
-                        <button class="filter-buttons"> S </button>
-                        <button class="filter-buttons"> M </button>
-                        <button class="filter-buttons"> L </button>
-                        <button class="filter-buttons"> XL </button>
-                    </div>
-                </div>
-                <div class="filter-area">
-                    <h4> Price </h4>
-                    <div class="price-input">
-                        <div class="field">
-                            <span> Min </span>
-                            <input type="number" class="input-min" value="2500">
-                        </div>
-                        <div class="separator"> - </div>
-                        <div class="field">
-                            <span> Max </span>
-                            <input type="number" class="input-max" value="7500">
+
+                    <div class="filter-area">
+                        <h4> Sort by </h4>
+                        <div>
+                            <button class="filter-buttons"> Newest </button>
+                            <button class="filter-buttons"> Sale </button>
+                            <button class="filter-buttons"> Trending </button>
+                            <button class="filter-buttons"> Lowest price </button>
+                            <button class="filter-buttons"> Highest price </button>
                         </div>
                     </div>
-                    <div class="slider">
-                        <div class="progress"> </div>
+                    <div class="filter-area">
+                        <h4> Brand </h4>
+                        <div>
+                            <button class="filter-buttons"> Fjallraven </button>
+                            <button class="filter-buttons"> MENS </button>
+                        </div>
                     </div>
-                    <div class="range-input">
-                        <input type="range" class="range-min" min="0" max="1000" value="2500">
-                        <input type="range" class="range-max" min="0" max="1000" value="7500">
+                    <div class="filter-area">
+                        <h4> Colors </h4>
+                        <div>
+                            <button class="filter-buttons"> Blue </button>
+                            <button class="filter-buttons"> White </button>
+                            <button class="filter-buttons"> Beige </button>
+                        </div>
                     </div>
-                </div>
+                    <div class="filter-area">
+                        <h4> Size </h4>
+                        <div>
+                            <button class="filter-buttons"> OneSize </button>
+                            <button class="filter-buttons"> S </button>
+                            <button class="filter-buttons"> M </button>
+                            <button class="filter-buttons"> L </button>
+                            <button class="filter-buttons"> XL </button>
+                        </div>
+                    </div>
+                    <div class="filter-area">
+                        <h4> Price </h4>
+                        <div class="price-input">
+                            <div class="field">
+                                <span> Min </span>
+                                <input type="number" class="input-min" value="2500">
+                            </div>
+                            <div class="separator"> - </div>
+                            <div class="field">
+                                <span> Max </span>
+                                <input type="number" class="input-max" value="7500">
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="progress"> </div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="range-min" min="0" max="1000" value="2500">
+                            <input type="range" class="range-max" min="0" max="1000" value="7500">
+                        </div>
+                    </div>
             </section>
 
             <section class="product-bread-crumbs">
@@ -157,6 +179,18 @@
         </div>
 
     </main>
+
+
+    <section class="bottom-page-banner">
+        <h3> Want to get more goodies from StyleHub? </h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat dignissim velit sed varius. Sed
+            pulvinar, justo in eleifend rhoncus, risus lorem condimentum sem, et iaculis libero nisl in elit.
+            Vivamus dignissim elit nibh, eget vehicula nibh tristique non.
+        </p>
+        <button class="hero-button"> Sign up </button>
+    </section>
+
 
     <footer>
         <div id="footer-mobile">
