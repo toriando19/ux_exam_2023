@@ -4,6 +4,11 @@
       "email": "josefinemaria@yahoo.dk",
       "password": "Password123@",
       "id": 1
+    },
+    {
+      "email": "emmarodam@gmail.com",
+      "password": "24Oktober.",
+      "id": 2
     }
   ]
 }
