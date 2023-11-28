@@ -83,12 +83,23 @@
 
 
 
+
 /* ----- TABLET ----- */
 
 @media screen and (min-width: 480px) {
-    
-  
+    .fp-product-list {
+        padding: 1.5rem !important;
+        margin: 0rem !important;
+    }
 
+    .product-frontpage-overview {
+        margin-bottom: 5rem; 
+    }
+
+    .product-frontpage-overview h2{
+        margin-top: 6rem;
+        margin-bottom: -1rem;
+    }
 
 }
 
