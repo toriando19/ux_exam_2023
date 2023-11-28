@@ -4,6 +4,7 @@
       "email": "josefinemaria@yahoo.dk",
       "password": "Password123@ ",
       "id": 1
+<<<<<<< Updated upstream
     },
     {
       "email": "josefinemaria@yahoo.dk",
@@ -14,6 +15,8 @@
       "email": "josefinemaria@yahoo.dk",
       "password": "Password222!",
       "id": 3
+=======
+>>>>>>> Stashed changes
     }
   ]
 }
