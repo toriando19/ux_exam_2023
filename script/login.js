@@ -1,17 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
+    console.log("DOM Loaded");
+
+    // Signup Functionality
     let signupBtn = document.getElementById("signupBtn");
-    let title = document.getElementById("title");
     let emailField = document.querySelector('input[type="email"]');
     let passwordInput = document.getElementById("passwordInput");
     let confirmPasswordField = document.getElementById("confirmPasswordField");
-    let nameField = document.getElementById("nameField");
 
     signupBtn.addEventListener('click', async function (event) {
         event.preventDefault();
-        nameField.style.maxHeight = "60px";
-        confirmPasswordField.style.maxHeight = "60px"; // Show confirm password on sign-up
-        title.innerHTML = "Sign up";
-
+        
         let email = emailField.value;
         let password = passwordInput.value;
         let confirmPassword = confirmPasswordField.querySelector('input[type="password"]').value;
@@ -31,20 +29,71 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         try {
-            // Simulating a successful signup for demonstration
-            // Replace this with your actual fetch to the server
-            // ...
+            // Make a POST request to add the user (replace with your actual endpoint)
+            const response = await fetch('http://localhost:3000/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
 
-            // On successful signup, redirect to login.html
-            redirectToLogin();
+            if (response.ok) {
+                // Redirect to login page after successful signup
+                window.location.href = "login.html";
+            } else {
+                console.error('Signup failed');
+            }
         } catch (error) {
             console.error('Error:', error);
         }
+     });
     });
+     
+   
 
-    function redirectToLogin() {
-        // Redirect to login.html after successful signup
-        window.location.href = "login.html";
-    }
-});
+      // Login Functionality
+      let loginBtn = document.getElementById("loginBtn");
+      let emailField = document.querySelector('input[type="email"]');
+    let passwordInput = document.getElementById("passwordInput");
+
+      loginBtn.addEventListener('click', async function () {
+          console.log('button clicked');
+  
+          let loginEmail = emailField.value;
+          let loginPassword = passwordInput.value;
+  
+          try {
+              // Fetch user data from JSON Server for authentication
+              const response = await fetch(`http://localhost:3000/users?email=${loginEmail}&password=${loginPassword}`);
+  
+              if (response.ok) {
+                  const userData = await response.json();
+                  if (userData.length > 0) {
+                      // Successfully logged in
+                      sessionStorage.setItem('loggedInUser', loginEmail);
+                      window.location.href = "index.html"; // Redirect to dashboard or homepage
+                  } else {
+                      console.error('Invalid credentials');
+                      // Show an error message for invalid credentials
+                      // Example: alert("Invalid email or password. Please try again.");
+                  }
+              } else {
+                  console.error('Login failed');
+              }
+          } catch (error) {
+              console.error('Error:', error)
+          }
+
+        });
+    
+
+        ////// logout //////////
+        document.getElementById("logoutBtn").addEventListener('click', function () {
+            sessionStorage.removeItem('loggedInUser'); // Remove from sessionStorage on logout
+        
+            // Optional: Redirect to the login page after logout
+            window.location.href = "login_signup.html";
+        });
+
 

@@ -59,7 +59,13 @@
         </div>
     </div>  
 
-    <section class="bread-crumbs"> <!-- Lad dem linke til steder på siden, så den highlighter/bliver mere synlig når man når til det punkt -->
+
+    <section class="check-out-header">
+        <h1> Check out </h1>
+    </section>
+
+
+    <section class="check-out-bread-crumbs"> <!-- Lad dem linke til steder på siden, så den highlighter/bliver mere synlig når man når til det punkt -->
         <div>
             <a href="#customer-info">Customer info</a> >
             <a href="#delivery">Delivery</a> >
@@ -67,24 +73,24 @@
         </div>
     </section>
 
-    <section class="cart">
-            <div class="cart-header">
-                <button id="cart_dropdown" class="dropdown" onclick="cart_dropdown()"> + </button>
+    <section class="check-out-cart">
+            <div class="check-out-cart-header">
+                <button id="check-out-cart_dropdown" class="check-out-cart-dropdown" onclick="cart_dropdown()"> + </button>
                 <h3> Your order </h3> <!-- Dropdown som viser oversigt til kurven -->
             </div>
 
-        <section id="order-info">
-            <div class="order-info">
+        <section id="check-out-order-info">
+            <div class="check-out-order-infotext">
                 <p id="itemCount">1 item(s)</p> <p id="itemPrice">$120</p>
                 <p>Delivery</p> <p id="deliveryPrice">$120</p>
             </div>
-            <div id="order-info" class="order-info">
+            <div id="check-out-order-infotext" class="check-out-order-infotext">
                 <p style="font-weight: bold;" > Total </p> <p id="totalPrice" style="font-weight: bold;"> $120</p>
                 <p> incl. VAT & Taxes </p> <p id="vatTaxesPrice"> $120</p>
             </div>
 
-            <section id="cart-overview" class="cart-overview">
-                <div class="cart-product">
+            <section id="check-out-cart-overview" class="check-out-cart-overview">
+                <div class="check-out-cart-product">
                     <img src="img/test_product.png" alt="">
                     <h3> Product name </h3>
                     <p> This is a description <br> about the product  </p>
@@ -98,8 +104,8 @@
         </section>
     </section>
 
-    <section class="customer-info">
-        <h3 id="customer-info"> Customer Info </h3>
+    <section class="check-out-customer-info">
+        <h3 id="check-out-customer-info"> Customer Info </h3>
         <form class="check-out-form">
             <input id="email" type="email" placeholder="E-mail*" required> <br>
             <input id="phone-number" type="tel" placeholder="Phone number*" required> <br>
@@ -114,22 +120,25 @@
         </form>
     </section>
 
-    <section class="delivery">
+    <section class="check-out-delivery">
         <h3 id="delivery"> Delivery </h3>
-            <form class="delivery-preferences" id="deliver-preferences">
-                <input id="checkbox" type="checkbox"> Standard shipping*
-                <input id="checkbox" type="checkbox"> Pakkeboks* <br>
-                <input id="repeat-address" type="checkbox" onchange="same_address()"> Deliver to same address <br> <!-- JS? Så man ikke behøver at skrive adressen ind 2 gange -->
+            <form class="check-out-delivery-preferences" id="deliver-preferences">
+                <input id="checkbox" type="checkbox"> 
+                <label> Standard shipping* </label> <br>
+                <input id="checkbox" type="checkbox"> 
+                <label> Pakkeboks* </label> <br>
+                <input id="repeat-address" type="checkbox" onchange="same_address()"> <!-- JS? Så man ikke behøver at skrive adressen ind 2 gange -->
+                <label> Deliver to same address* </label> <br>
             </form>
-        <form class="check-out-form" id="repeat-address-info">
-            <h3 id="delivery"> Delivery address </h3>
+        <form class="check-out-form-delivery" id="repeat-address-info">
+            <h3 id="check-out-delivery"> Delivery address </h3>
             <input id="address" type="text" placeholder="Address*" required> <br>
             <input id="zip-code" type="text" placeholder="Zip code*" required> <br>
             <input id="city" type="text" placeholder="City*" required> <br>
         </form>
     </section>
 
-    <section class="payment">
+    <section class="check-out-payment">
         <h3 id="payment"> Payment </h3>
         <form class="check-out-form">
             <input id="cname" type="text" placeholder="Name on card*"> <br>
@@ -140,25 +149,25 @@
         </form>
     </section>
 
-    <button class="confirm-button" onclick="submitForm()"> Confirm payment </button>
+    <button class="check-out-confirm-button" onclick="submitForm()"> Confirm payment </button>
 
 
-    <section id="confirm-pop-up" class="confirm-pop-up">
-        <section class="confirm-pop-up-window">
-            <button id="cart_dropdown" class="edit-customer-info" onclick="closePopup()"> ✎ </button>
+    <section id="confirm-pop-up" class="check-out-confirm-pop-up">
+        <section class="check-out-confirm-pop-up-window">
+            <button id="cart_dropdown" class="check-out-edit-customer-info" onclick="closePopup()"> ✎ </button>
             <h3> Confirm transaction </h3>
 
-        <section class="cart2">
+        <section class="check-out-cart2">
                 <div class="cart-header2">
                     <h4> Your order </h4> 
                 </div>
     
             <section id="order-info">
-                <div class="order-info">
+                <div class="check-out-order-infotext">
                     <p>1 item(s)</p> <p>$120</p>
                     <p>Delivery</p> <p>$120</p>
                 </div>
-                <div id="order-info" class="order-info">
+                <div id="order-info" class="check-out-order-infotext">
                     <p style="font-weight: bold;"> Total </p> <p style="font-weight: bold;"> $120</p>
                     <p> VAT & Taxes </p> <p> $120</p>
                 </div>
@@ -166,7 +175,7 @@
         </section>
 
 
-        <section class="confirm-customer-info">
+        <section class="check-out-confirm-customer-info">
             <p id="popup-confirm-Email"> Email</p>        
             <p id="popup-confirm-Phone"> Phone</p>        
             <p id="popup-confirm-Name"> Name</p>      
@@ -194,14 +203,14 @@
             </div>
         </section> -->
 
-        <section class="confirm-customer-info">
+        <section class="check-out-confirm-customer-info">
             <p style="font-weight: bold;"> Card </p>     <p>1234-5678-9123-4567 <br> 12 / 34  <br> 012 </p>
         </section>
         
         
-        <div class="confirm-buttons">
-            <button class="cancel-purchase" onclick="closePopup()"> Cancel </button>
-            <button class="confirm-purchase" onclick=""> Confirm purchase </button>
+        <div class="check-out-confirm-buttons">
+            <button class="check-out-cancel-purchase" onclick="closePopup()"> Cancel </button>
+            <button id="clearLocalStorageBtn" class="check-out-confirm-purchase" onclick="clearLocalStorage()"> Confirm purchase </button>
         </div>
     </section>
                
