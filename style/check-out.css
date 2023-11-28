@@ -16,25 +16,29 @@
     text-align: center;
 }
 
-
-
-/* BREAD CRUMBS */
-
-.check-out-bread-crumbs {
-    display: none;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 1rem;
-}
-
-.check-out-bread-crumbs a {
-    text-decoration: none;
-    
-}
-
 /* ///////////////////////////////////////////////////////// */
 
 /* CART DISPLAY */
+
+.checkout-cart-item-overview {
+    display: grid;
+}
+
+.checkout-cart-item-overview img {
+    width: 20%;
+    float: left;
+}
+
+.checkout-cart-item-overview h4 { 
+    float: right;
+    color: var(--colorSecondary);
+}
+
+.checkout-cart-item-overview p { 
+    float: right;
+    color: var(--colorSecondary);
+}
+
 
 .check-out-cart {
     background-color: var(--basicColor);
