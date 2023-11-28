@@ -18,8 +18,9 @@ loginBtn.addEventListener('click', async function () {
             const userData = await response.json();
             if (userData.length > 0) {
                 // Successfully logged in
-                sessionStorage.setItem('loggedInUser', loginEmail);
-                window.location.href = "index.html"; // Redirect to dashboard or homepage
+                sessionStorage.setItem('loggedInUserId', userData[0].id); // Store user ID
+    sessionStorage.setItem('loggedInUserEmail', loginEmail); // Store user email
+    window.location.href = "index.html"; // Redirect to dashboard or homepage
             } else {
                 console.error('Invalid credentials');
                 // Show an error message for invalid credentials

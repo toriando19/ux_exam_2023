@@ -1,9 +1,3 @@
 {
-  "users": [
-    {
-      "email": "josefinemaria@yahoo.dk",
-      "password": "Password123@",
-      "id": 1
-    }
-  ]
+  "users": []
 }

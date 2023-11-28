@@ -1,10 +1,25 @@
-// Logout Functionality
-let logoutBtn = document.getElementById("logoutBtn");
+logoutBtn.addEventListener('click', async function () {
+    let loggedInUserId = sessionStorage.getItem('loggedInUserId');
+    let loggedInUserEmail = sessionStorage.getItem('loggedInUserEmail');
 
-logoutBtn.addEventListener('click', function () {
-    // Clear the user session data
-    sessionStorage.removeItem('loggedInUser');
+    try {
+        const deleteResponse = await fetch(`http://localhost:3000/users/${loggedInUserId}`, {
+            method: 'DELETE',
+        });
 
-    // Redirect to login_signup.html when logout button is clicked
-    window.location.href = "login_signup.html";
+        if (deleteResponse.ok) {
+            console.log('User data deleted successfully');
+            sessionStorage.removeItem('loggedInUserId');
+            sessionStorage.removeItem('loggedInUserEmail');
+            window.location.href = "login_signup.html";
+        } else {
+            console.error('Failed to delete user data. Status:', deleteResponse.status);
+            const errorMessage = await deleteResponse.text();
+            console.error('Error message:', errorMessage);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
 });
+
+
