@@ -148,6 +148,7 @@
 }
 
 .hero-text a {
+    margin-top: 2rem;
     text-decoration: none;
     color: var(--colorSecondary);
     padding: 0.8rem;
@@ -172,6 +173,10 @@
     font-size: 0.8rem;
     font-weight: 300;
     color: var(--colorSecondary);
+}
+
+#category-menu {
+    margin: 1rem 0rem;
 }
 
 /* footer */
