@@ -95,15 +95,16 @@
         </div>
     </section>
 
-    <section class="product-frontpage-overview">
-        <h2> New arrivals </h2>
-
-        <section class="products" id="product-list">
-            <!-- Product cards will be dynamically added here -->
-        </section>
+    <section id="category-frontpage-overview">
+        <h2> Categories </h2>
+        <ul>
+            <div class="category-fp"><a href="products.html">All products</a></div>
+            <div class="category-fp"><a href="electronics.html">Electronics</a></div>
+            <div class="category-fp"><a href="jewelery.html">Jewelery</a></div>
+            <div class="category-fp"><a href="mens.html">Mens</a></div>
+            <div class="category-fp"><a href="womens.html">Womens</a></div>
+        </ul>
     </section>
-
-    
 
     <section class="hero-secondary-image">
         <div class="hero-secondary-text">
@@ -117,7 +118,13 @@
         </div>
     </section>
 
+    <section class="product-frontpage-overview">
+        <h2> New arrivals </h2>
 
+        <section class="products fp-product-list" id="product-list">
+            <!-- Product cards will be dynamically added here -->
+        </section>
+    </section>
 
     <section class="bottom-page-banner">
         <h3> Want to get more goodies from StyleHub? </h3>
@@ -194,7 +201,7 @@
 
 
     <script src="script/script.js" defer></script>
-    <script src="script/all-products-api.js" defer></script>
+    <script src="script/fp-api.js" defer></script>
 
     <script src="script/logout.js" defer></script>
 

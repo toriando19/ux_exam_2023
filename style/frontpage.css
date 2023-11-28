@@ -30,6 +30,38 @@
     color: var(--colorSecondary);
 }
 
+#category-frontpage-overview {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--colorBgSecondary);
+    padding-bottom: 4rem;
+}
+
+#category-frontpage-overview h2{
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 30px;
+    color: var(--colorSecondary);
+}
+
+#category-frontpage-overview ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#category-frontpage-overview ul a {
+    text-decoration: none;
+    padding: 0.5rem;
+    color: var(--colorSecondary);
+}
+
+#category-frontpage-overview ul a:hover {
+    color: var(--colorCTA);
+}
+
+
+
 .hero-secondary-text {
     text-align: center;
     position: absolute;
@@ -62,7 +94,6 @@
 }
 
 
-
 .bottom-page-banner {
     margin-top: 3rem;
     margin-bottom: -4rem;
@@ -83,14 +114,63 @@
 
 
 
+
 /* ----- TABLET ----- */
 
 @media screen and (min-width: 480px) {
+    .fp-product-list {
+        padding: 1.5rem !important;
+        margin: 0rem !important;
+    }
+
+    .product-frontpage-overview {
+        margin-bottom: 5rem; 
+    }
+
+    .product-frontpage-overview h2{
+        margin-top: 6rem;
+        margin-bottom: -1rem;
+    }
+
+    #category-frontpage-overview {
+        padding-bottom: 5rem; 
+    }
     
-  
+    #category-frontpage-overview ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        padding: 6rem 1rem;
+    }
+    
+    .category-fp {
+        position: relative;
+        display: block;
+        padding: auto;
+        margin: auto;
+        height: 12rem;
+        width: 12rem;
+        background-image: url('../img/hero.jpg'); /* Photo by <a href="https://unsplash.com/@freestocks?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">freestocks</a> on <a href="https://unsplash.com/photos/photo-of-woman-holding-white-and-black-paper-bags-_3Q3tsJ01nc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--colorCTA);
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+
+    .category-fp a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .category-fp a:hover {
+        color: var(--colorCTA);
+    }
+
 
 
 }
-
-
-/* ----- DESKTOP ----- */
