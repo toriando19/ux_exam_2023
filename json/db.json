@@ -1,3 +1,18 @@
 {
+<<<<<<< HEAD
   "users": []
+=======
+  "users": [
+    {
+      "email": "josefinemaria@yahoo.dk",
+      "password": "Password123@",
+      "id": 1
+    },
+    {
+      "email": "emmarodam@gmail.com",
+      "password": "24Oktober.",
+      "id": 2
+    }
+  ]
+>>>>>>> d98a9cb13bd0fb0673643b29b52552a9001425a6
 }
