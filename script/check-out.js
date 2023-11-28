@@ -73,6 +73,10 @@ function submitForm() {
     const firstname             = document.getElementById('check-out-fname').value;
     const lastname              = document.getElementById('check-out-lname').value;
 
+    const deliveryaddress       = document.getElementById('address').value;
+    const deliveryzipcode       = document.getElementById('zip-code').value;
+    const deliverycity          = document.getElementById('city').value;
+    
     const cardnumber            = document.getElementById('ccnumber').value;
     const cardmonth             = document.getElementById('expmonth').value;
     const cardyear              = document.getElementById('expyear').value;
@@ -84,6 +88,9 @@ function submitForm() {
         <p>Email:</p>           <span id="outputEmail">${email}</span>
         <p>Phonenumber:</p>     <span id="outputName">${phonenumber}</span>
         <p>Name:</p>            <span id="outputName">${firstname} ${lastname}</span>
+        <br> <br>
+        <p>Address:</p>         <span id="outputName">${deliveryaddress} 
+                                <br> ${deliveryzipcode} ${deliverycity} 
         <br> <br>
         <p>Creditcard:</p>      <span id="outputName">${cardnumber} 
                                 <br> ${cardmonth} ${cardyear} 
