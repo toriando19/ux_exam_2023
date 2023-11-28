@@ -215,6 +215,7 @@
     padding: 0.5rem;
     align-items: center;
     background-color: var(--colorCTA);
+    color: var(--colorSecondary);
     border: none;
     border-radius: 5px;
     font-size: 15px;
@@ -598,6 +599,7 @@
     padding: 0.5rem;
     align-items: center;
     background-color: var(--colorCTA);
+    color: var(--colorSecondary);
     border: none;
     font-size: 15px;
 }
