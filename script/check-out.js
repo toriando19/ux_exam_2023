@@ -1,25 +1,4 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Check-out-form visibility ///////////////////////////////////////////////////////////////////////////
-
-//Skal fixes...
-
-document.getElementById('form').addEventListener('input', function () {
-    // Check if both name and email fields are filled
-    var name = document.getElementById('name').value.trim();
-    var email = document.getElementById('email').value.trim();
-  
-    if (name !== '' && email !== '') {
-        // If both fields are filled, show the hidden content
-        document.getElementById('hiddenContent').style.display = 'block';
-    } else {
-        // If any field is empty, hide the content
-        document.getElementById('hiddenContent').style.display = 'none';
-    }
-});
-  
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Cart dropdown /////////////////////////////////////////////////////////////////////////////////////
 
@@ -38,32 +17,6 @@ function cart_dropdown() {
 
 // Your order: Calculations /////////////////////////////////////////////////////////////////////////////////////
 
-var itemCount = 1;
-var itemPrice = 120;
-var deliveryPrice = 120;
-
-// Variable to accumulate the total
-var totalAccumulator = (itemCount * itemPrice) + deliveryPrice;
-
-function updateOrderInfo() {
-    var itemCountElement = document.getElementById('itemCount');
-    var itemPriceElement = document.getElementById('itemPrice');
-    var deliveryPriceElement = document.getElementById('deliveryPrice');
-    var totalElement = document.getElementById('totalPrice');
-    var vatTaxesElement = document.getElementById('vatTaxesPrice');
-
-    // Update item count and prices
-    itemCountElement.textContent = itemCount + ' item(s)';
-    itemPriceElement.textContent = '$' + (itemCount * itemPrice);
-    deliveryPriceElement.textContent = '$' + deliveryPrice;
-
-    // Calculate total, including VAT & Taxes
-    totalAccumulator = (itemCount * itemPrice) + deliveryPrice;
-    var vatTaxes = totalAccumulator * 0.2; // Assuming VAT and Taxes are 20%
-    
-    totalElement.textContent = '$' + totalAccumulator;
-    vatTaxesElement.textContent = '$' + vatTaxes;
-}
 
 
 
@@ -110,20 +63,32 @@ function submitForm() {
     } else {
         section.style.display = 'none';
     }
-}
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Summary in popup - view filled form ///////////////////////////////////////////////////////////////////////////
+    // Summary in popup - view filled form ///////////////////////////////////////////////////////////////////////////
 
-function summary() {
     // Get form values
-    var email = document.getElementById('email').value.trim();
-    var name = document.getElementById('fname').value.trim() + ' ' + document.getElementById('lname').value.trim();
+    const email                 = document.getElementById('check-out-email').value;
+    const phonenumber           = document.getElementById('check-out-phone-number').value;
+    const firstname             = document.getElementById('check-out-fname').value;
+    const lastname              = document.getElementById('check-out-lname').value;
 
-    // Display summary in the popup
-    document.getElementById('popup-confirm-Email').textContent = 'Email: ' + email;
-    document.getElementById('popup-confirm-Name').textContent = 'Name: ' + name;
+    const cardnumber            = document.getElementById('ccnumber').value;
+    const cardmonth             = document.getElementById('expmonth').value;
+    const cardyear              = document.getElementById('expyear').value;
+    const cardcvv               = document.getElementById('cvv').value;
+
+    // Display values in the HTML
+    const outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = `
+        <p>Email:</p>           <span id="outputEmail">${email}</span>
+        <p>Phonenumber:</p>     <span id="outputName">${phonenumber}</span>
+        <p>Name:</p>            <span id="outputName">${firstname} ${lastname}</span>
+        <br> <br>
+        <p>Creditcard:</p>      <span id="outputName">${cardnumber} 
+                                <br> ${cardmonth} ${cardyear} 
+                                <br> ${cardcvv} </span>
+    `;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -139,6 +104,7 @@ function closePopup() {
     } else {
         section.style.display = 'grid';
     }
+
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -152,12 +118,8 @@ function clearLocalStorage() {
     window.location.href = "index.html"; // Return to frontpage after confirm purchase //
 }
 
-// Attach the function to the button click event
-document.getElementById("clearLocalStorageBtn").addEventListener("click", clearLocalStorage);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 
 
 
