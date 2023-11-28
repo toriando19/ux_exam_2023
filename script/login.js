@@ -19,7 +19,7 @@ loginBtn.addEventListener('click', async function () {
                 console.log('User found:', userData[0]); // Log the user object
                 sessionStorage.setItem('loggedInUserId', userData[0].id);
                 sessionStorage.setItem('loggedInUserEmail', loginEmail);
-                window.location.href = "index.html";
+                window.location.href = "frontpage.html";
             } else {
                 console.error('No user found for provided credentials');
                 // Show an error message for invalid credentials

@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 sessionStorage.removeItem('loggedInUserId');
                 sessionStorage.removeItem('loggedInUserEmail');
                 sessionStorage.removeItem('loggedInUser');
-                window.location.href = "login_signup.html";
+                window.location.href = "index.html";
             } else {
                 console.error('Failed to delete user data. Status:', deleteResponse.status);
                 const errorMessage = await deleteResponse.text();

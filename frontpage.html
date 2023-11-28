@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
-    <title>Jewelery</title>
+    <title> Home | StyleHub </title>
 </head>
 
 <body>
 
-    
     <div id="mobile-menu">
         <a href="frontpage.html"><div id="logo"></div></a>
         <a class="hamburger" href="#navbar" aria-label="Open main menu">
@@ -76,100 +75,52 @@
                 onclick="addClass()">close</span>
         </div>
     </div>
-   
-    <section class="hero-image" loading="lazy">
+
+
+
+    <section class="hero-image">
         <div class="hero-text">
-            <h1>Jewelery</h1>
-            <ul id="category-menu">
-                <a href="products.html">All products</a>
-                <a href="electronics.html">Electronics</a>
-                <a href="Jewelery.html" class="active">Jewelery</a>
-                <a href="mens.html">Mens</a>
-                <a href="womens.html">Womens</a>
-            </ul>
+            <img src="" alt="">
+            <h1>StyleHub</h1>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat dignissim velit sed varius. Sed
                 pulvinar, justo in eleifend rhoncus, risus lorem condimentum sem, et iaculis libero nisl in elit.
                 Vivamus dignissim elit nibh, eget vehicula nibh tristique non.
             </p>
+            <button class="hero-button"> Read more </button>
         </div>
     </section>
 
-    <main>
-        <div class="product-page">
-            <section class="filter">
-                <div>
-                    <h3> Filter </h3>
-                </div>
-                <div class="filter-area">
-                    <h4> Sort by </h4>
-                    <div>
-                        <button class="filter-buttons"> Newest </button>
-                        <button class="filter-buttons"> Sale </button>
-                        <button class="filter-buttons"> Trending </button>
-                        <button class="filter-buttons"> Lowest price </button>
-                        <button class="filter-buttons"> Highest price </button>
-                    </div>
-                </div>
-                <div class="filter-area">
-                    <h4> Brand </h4>
-                    <div>
-                        <button class="filter-buttons"> John Hardy </button>
-                        <button class="filter-buttons"> Solid </button>
-                        <button class="filter-buttons"> Owl </button>
-                    </div>
-                </div>
-                <div class="filter-area">
-                    <h4> Color </h4>
-                    <div>
-                        <button class="filter-buttons"> Gold </button>
-                        <button class="filter-buttons"> Silver </button>
-                        <button class="filter-buttons"> Rose Gold </button>
-                    </div>
-                </div>
-                <div class="filter-area">
-                    <h4> Size </h4>
-                    <div>
-                        <button class="filter-buttons"> OneSize </button>
-                        <button class="filter-buttons"> S </button>
-                        <button class="filter-buttons"> M </button>
-                        <button class="filter-buttons"> L </button>
-                        <button class="filter-buttons"> XL </button>
-                    </div>
-                </div>
-                <div class="filter-area">
-                    <h4> Price </h4>
-                    <div class="price-input">
-                        <div class="field">
-                            <span> Min </span>
-                            <input type="number" class="input-min" value="2500">
-                        </div>
-                        <div class="separator"> - </div>
-                        <div class="field">
-                            <span> Max </span>
-                            <input type="number" class="input-max" value="7500">
-                        </div>
-                    </div>
-                    <div class="slider">
-                        <div class="progress"> </div>
-                    </div>
-                    <div class="range-input">
-                        <input type="range" class="range-min" min="0" max="1000" value="2500">
-                        <input type="range" class="range-max" min="0" max="1000" value="7500">
-                    </div>
-                </div>
-            </section>
+    <section id="category-frontpage-overview">
+        <h2> Categories </h2>
+        <ul>
+            <div class="category-fp"><a href="products.html">All products</a></div>
+            <div class="category-fp"><a href="electronics.html">Electronics</a></div>
+            <div class="category-fp"><a href="jewelery.html">Jewelery</a></div>
+            <div class="category-fp"><a href="mens.html">Mens</a></div>
+            <div class="category-fp"><a href="womens.html">Womens</a></div>
+        </ul>
+    </section>
 
-            <section class="product-bread-crumbs">
-                <a class="bread-crumbs-link" href="index.html"> Home </a> >
-                <a class="bread-crumbs-link" href="products.html"> All products </a> >
-                <a class="bread-crumbs-link-active" href="jewelery.html"> Jewelery </a> 
-            </section>
-            <section class="products" id="product-list">
-                <!-- Product cards will be dynamically added here -->
-            </section>
+    <section class="hero-secondary-image">
+        <div class="hero-secondary-text">
+            <img src="" alt="">
+            <h1>Black Friday - up to 40% </h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat dignissim velit <br>
+                sed varius. Sed pulvinar, justo in eleifend rhoncus, risus lorem condimentum sem, et <br>
+                iaculis libero nisl in elit. Vivamus dignissim elit nibh, eget vehicula nibh tristique non.
+            </p>
         </div>
-    </main>
+    </section>
+
+    <section class="product-frontpage-overview">
+        <h2> New arrivals </h2>
+
+        <section class="products fp-product-list" id="product-list">
+            <!-- Product cards will be dynamically added here -->
+        </section>
+    </section>
 
     <section class="bottom-page-banner">
         <h3> Want to get more goodies from StyleHub? </h3>
@@ -181,26 +132,30 @@
         <button class="hero-button"> Sign up </button>
     </section>
 
+
     <footer>
         <div id="footer-mobile">
-            <button class="accordion">StyleHub <span class="material-symbols-outlined float" >keyboard_arrow_down</span></button>
+            <button class="accordion">StyleHub <span
+                    class="material-symbols-outlined float">keyboard_arrow_down</span></button>
             <div class="panel">
                 <p>Content for Section 1 goes here.</p>
             </div>
-    
-            <button class="accordion">Links <span class="material-symbols-outlined float" >keyboard_arrow_down</span></button>
+
+            <button class="accordion">Links <span
+                    class="material-symbols-outlined float">keyboard_arrow_down</span></button>
             <div class="panel">
-                <p>                
-                    <ul id="footer-links">
-                        <a href="http://">Kontakt os</a>
-                        <a href="http://">Returnering</a>
-                        <a href="http://">Handelsbetingelser</a>
-                        <a href="http://">Persondata- og cookiepolitik</a>
-                    </ul>
+                <p>
+                <ul id="footer-links">
+                    <a href="http://">Kontakt os</a>
+                    <a href="http://">Returnering</a>
+                    <a href="http://">Handelsbetingelser</a>
+                    <a href="http://">Persondata- og cookiepolitik</a>
+                </ul>
                 </p>
             </div>
-    
-            <button class="accordion">Nyhedsbrev <span class="material-symbols-outlined float" >keyboard_arrow_down</span></button>
+
+            <button class="accordion">Nyhedsbrev <span
+                    class="material-symbols-outlined float">keyboard_arrow_down</span></button>
             <div class="panel">
                 <p>Content for Section 3 goes here.</p>
             </div>
@@ -211,12 +166,13 @@
                 </div>
             </div>
         </div>
-        
+
         <div id="footer-desktop">
             <section id="footer-1">
                 <h4>StyleHub</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat dignissim velit sed varius. Sed
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat dignissim velit sed varius.
+                    Sed
                     pulvinar, justo in eleifend rhoncus, risus lorem condimentum sem, et iaculis libero nisl in elit.
                     Vivamus dignissim elit nibh, eget vehicula nibh tristique non.
                 </p>
@@ -241,9 +197,15 @@
             </section>
         </div>
     </footer>
-    <script src="script/jewelery-api.js"></script>
-    <script src="script/script.js"></script>
-    <script src="script/logout.js"></script>
+
+
+
+    <script src="script/logout.js" defer></script>
+
+
+    <script src="script/script.js" defer></script>
+
+    <script src="script/fp-api.js" defer></script>
 </body>
 
 </html>
