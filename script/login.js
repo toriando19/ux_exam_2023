@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
                   if (userData.length > 0) {
                       // Successfully logged in
                       sessionStorage.setItem('loggedInUser', loginEmail);
-                      window.location.href = "index.html"; // Redirect to dashboard or homepage
+                      window.location.href = "products.html"; // Redirect to dashboard or homepage
                   } else {
                       console.error('Invalid credentials');
                       // Show an error message for invalid credentials
@@ -84,16 +84,11 @@ document.addEventListener("DOMContentLoaded", function() {
           } catch (error) {
               console.error('Error:', error)
           }
-
+          
         });
     
 
         ////// logout //////////
-        document.getElementById("logoutBtn").addEventListener('click', function () {
-            sessionStorage.removeItem('loggedInUser'); // Remove from sessionStorage on logout
-        
-            // Optional: Redirect to the login page after logout
-            window.location.href = "login_signup.html";
-        });
+      
 
 
