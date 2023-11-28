@@ -341,6 +341,282 @@
 
 @media only screen and (min-width: 425px) { /* Same as an -> iPhone XR - Mobile L */
 
+/* Check-out-header */
+.check-out-header {
+    margin: 1rem;
+    padding-top: 5rem;
+    color: var(--colorSecondary);
+}
+
+.check-out-header h1 {
+    font-size: 25px;
+    text-align: center;
+}
+
+/* ///////////////////////////////////////////////////////// */
+
+/* CART DISPLAY */
+
+.checkout-cart-item-overview {
+    display: grid;
+}
+
+.checkout-cart-item-overview img {
+    width: 20%;
+    float: left;
+}
+
+.checkout-cart-item-overview h4 { 
+    float: right;
+    color: var(--colorSecondary);
+}
+
+.checkout-cart-item-overview p { 
+    float: right;
+    color: var(--colorSecondary);
+}
+
+
+.check-out-cart {
+    width: 50%;
+    background-color: var(--basicColor);
+    color: var(--colorCTA);
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+.check-out-cart-header {
+    margin: 2rem;
+}
+
+.check-out-cart h2 {
+    margin-top: 1rem;
+}
+
+.check-out-cart-dropdown {
+    float: right;
+    border: none;
+    color: var(--basicColor);
+    background-color: var(--colorCTA);
+    font-weight: 900;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+
+/* ///////////////////////////////////////////////////////// */
+
+/* STYLING OF FORMS */
+
+.check-out-form {
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
+
+.check-out-form input {
+    background-color: var(--colorBgSecondary);
+    border: none;
+    padding: 10px;
+    margin-bottom: 0.2rem;
+    width: 100%;
+}
+
+/* ///////////////////////////////////////////////////////// */
+
+/* CUSTOMER INFO */
+
+.check-out-customer-info {
+    margin: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.check-out-customer-info h3 {
+    color: var(--colorSecondary);
+}
+
+/* ///////////////////////////////////////////////////////// */
+
+/* DELIVERY */
+
+.check-out-delivery {
+    margin: 1rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.check-out-form-delivery {
+    margin-top: 3rem;
+}
+
+.check-out-form-delivery input {
+    background-color: var(--colorBgSecondary);
+    border: none;
+    padding: 10px;
+    margin-bottom: 0.2rem;
+    width: 100%;
+}
+
+.check-out-deliver-preferences {
+    margin-bottom: 1rem;
+}
+
+.check-out-delivery h3 {
+    color: var(--colorSecondary);
+}
+
+
+/* ///////////////////////////////////////////////////////// */
+
+/* PAYMENT */
+
+.check-out-payment {
+    margin: 1rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.check-out-payment h3 {
+    color: var(--colorSecondary);
+}
+
+
+/* ///////////////////////////////////////////////////////// */
+
+/* CONFIRM */
+
+.check-out-confirm-button {
+    width: 50%;
+    margin: 1rem;
+    padding: 0.5rem;
+    align-items: center;
+    background-color: var(--colorCTA);
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ///////////////////////////////////////////////////////// */
+
+/* (DOUBLE) CONFIRM PAYMENT - POP-UP */
+
+.check-out-confirm-pop-up {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    float: center;
+    z-index: 1000;
+    padding: 2rem;
+}
+
+.check-out-confirm-pop-up-window {
+    background-color: #eaeaea;
+    width: 50%;
+    padding: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.check-out-confirm-pop-up-window h3 {
+    color: var(--colorCTA);
+    font-size: 20px;
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+
+.check-out-confirm-customer-info {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    font-weight: 300;
+}
+
+.check-out-edit-customer-info {
+    float: right;
+    border: none;
+    color: var(--basicColor);
+    background-color: var(--colorCTA);
+    font-weight: 900;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 1rem;
+    font-size: 25px;
+}
+
+.check-out-cart2 {
+    background-color: var(--basicColor);
+    color: var(--colorCTA);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.check-out-cart-header2 {
+    margin: 1rem;
+}
+
+.check-out-cart2 h4 {
+    margin-top: 1rem;
+    font-size: 18px;
+}
+
+.check-out-confirm-address {
+    margin-top: 1rem;
+}
+
+.check-out-confirm-buttons {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.check-out-cancel-purchase {
+    padding: 0.5rem;
+    align-items: center;
+    background-color: var(--basicColor);
+    font-size: 15px;
+    border: solid;
+    border-width: 1px;
+    border-color: var(--colorCTA);
+}
+
+.check-out-confirm-purchase {
+    padding: 0.5rem;
+    align-items: center;
+    background-color: var(--colorCTA);
+    border: none;
+    font-size: 15px;
+}
+
+.check-out-form-output {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.check-out-form-output p {
+    font-weight: bold;
+}
+
+
+
+/* ///////////////////////////////////////////////////////// */
+
+
+
 
 
 
