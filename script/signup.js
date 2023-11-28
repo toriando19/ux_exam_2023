@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         try {
-            // Make a POST request to add the user (replace with your actual endpoint)
+            // Make a POST request to add the user
             const response = await fetch('http://localhost:3000/users', {
                 method: 'POST',
                 headers: {

@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    const logoutBtn = document.getElementById('logoutBtn'); // Replace 'yourButtonId' with the actual ID of your button
+    const logoutBtn = document.getElementById('logoutBtn');
 
     logoutBtn.addEventListener('click', async function () {
         console.log("Logout button clicked"); // Check if the event listener is triggered
