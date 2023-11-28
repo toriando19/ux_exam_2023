@@ -9,9 +9,11 @@
 </head>
 <body>
 
+   
+    
     <div id="mobile-menu">
         <div id="logo">
-            <img src="logo" alt="">
+            <img src="img/StyleHub-blue.svg" alt="StyleHub Logo">
         </div>
         <a class="hamburger" href="#navbar" aria-label="Open main menu">
             <span class="sr-only">Open main menu</span>
@@ -22,9 +24,11 @@
             <a href="trending.html">Trending</a>
             <a href="products.html">All products</a>
             <div id="icon-menu">
-                <a><span class="material-symbols-outlined" id="search-icon" onclick="removeClass()">search</span></a>
-                <a><span class="material-symbols-outlined">person</span></a>
-                <a><span class="material-symbols-outlined">shopping_basket</span></a>
+                <a><span class="material-symbols-outlined" id="search-icon"
+                        onclick="removeClass()">search</span></a>
+                <a id="logoutBtn" type="button"><span class="material-symbols-outlined">logout</span></a>
+                <a><span class="material-symbols-outlined" id="shopping-icon"
+                        onclick="showCart()">shopping_basket</span></a>
             </div>
             <a class="close" href="#" aria-label="Close main menu">
                 <span class="sr-only">Close main menu</span>
@@ -34,7 +38,7 @@
 
     <header id="site-header">
         <div id="logo">
-            <img src="logo" alt="">
+            <img src="img/StyleHub-blue.svg" alt="StyleHub Logo">
         </div>
         <nav>
             <a href="index.html">Home</a>
@@ -43,19 +47,39 @@
             <a href="products.html">All products</a>
         </nav>
         <div id="icon-menu">
-            <a><span class="material-symbols-outlined" id="search-icon" onclick="removeClass()">search</span></a>
-            <a><span class="material-symbols-outlined">person</span></a>
-            <a><span class="material-symbols-outlined">shopping_basket</span></a>
+            <a><span class="material-symbols-outlined" id="search-icon"
+                    onclick="removeClass()">search</span></a>
+        <a id="logoutBtn" type="button"><span class="material-symbols-outlined">logout</span></a>
+        </div>
+
+        <div class="icon-shopping">
+            <p id="quantity">0</p>
+            <a><span class="material-symbols-outlined" id="shopping-icon"
+                    onclick="showCart()">shopping_basket</span></a>
         </div>
     </header>
-    
+
+    <div class="hidden" id="shopping-container">
+        <div class="cart" id="cart">
+            <span class="material-symbols-outlined close-button" alt="close button." onclick="hideCart()">close</span>
+            <h2>Cart</h2>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items goes here -->
+            </div>
+            <button id="cart-checkout-btn"><a href="check-out.html">Go to checkout</a></button>
+        </div>
+    </div>
+
+
     <div class="hidden blur-container" id="search-container">
         <div id="search">
             <span class="material-symbols-outlined">search</span>
             <input type="text" id="search-bar" placeholder="Search...">
-            <span class="material-symbols-outlined" id="close-button" alt="close button." onclick="addClass()">close</span>
+            <span class="material-symbols-outlined" class="close-button" alt="close button."
+                onclick="addClass()">close</span>
         </div>
     </div>
+   
 
 
     <section class="check-out-header">
@@ -166,6 +190,7 @@
     <script src="script/script.js" defer></script>
     <script src="script/check-out.js" defer></script>
     <script src="script/all-products-api.js"></script>
+    <script src="script/logout.js"></script>
 
 
 </body>
