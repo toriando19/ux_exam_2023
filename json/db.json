@@ -1,24 +1,9 @@
 {
   "users": [
     {
-      "email": "gitte.olsen@yahoo.dk",
+      "email": "josefinemaria@yahoo.dk",
       "password": "Password123@",
       "id": 1
-    },
-    {
-      "email": "josefinemaria@yahoo.dk",
-      "password": "Password123@",
-      "id": 2
-    },
-    {
-      "email": "josefinemaria@yahoo.dk",
-      "password": "Password123@",
-      "id": 3
-    },
-    {
-      "email": "josefinemaria@yahoo.dk",
-      "password": "Password123@",
-      "id": 4
     }
   ]
 }

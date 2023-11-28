@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <script src="script/script.js" defer></script>
-    <script src="script/all-products-api.js" defer></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
     <title> Home | StyleHub </title>
 </head>
@@ -24,7 +22,7 @@
         <div id="icon-menu">
             <a><span class="material-symbols-outlined" id="search-icon"
                     onclick="removeClass()">search</span></a>
-            <a><span class="material-symbols-outlined">logout</span></a>
+            <a id="logoutBtn" type="button"><span class="material-symbols-outlined">logout</span></a>
         </div>
 
         <div class="icon-shopping">
@@ -167,9 +165,10 @@
 
 
 
+    <script src="script/script.js" defer></script>
+    <script src="script/all-products-api.js" defer></script>
 
-    
-
+    <script src="script/logout.js" defer></script>
 
 </body>
 </html>
